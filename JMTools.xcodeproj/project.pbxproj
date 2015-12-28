@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D06FF28B1C317B7700AFA9C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28A1C317B7700AFA9C8 /* main.m */; };
+		D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */; };
+		D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2901C317B7700AFA9C8 /* ViewController.m */; };
+		D06FF2941C317B7700AFA9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2921C317B7700AFA9C8 /* Main.storyboard */; };
+		D06FF2961C317B7700AFA9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2951C317B7700AFA9C8 /* Assets.xcassets */; };
+		D06FF2991C317B7700AFA9C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2971C317B7700AFA9C8 /* LaunchScreen.storyboard */; };
+		D06FF2A41C317B7700AFA9C8 /* JMToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2A31C317B7700AFA9C8 /* JMToolsTests.m */; };
+		D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2B01C317BA000AFA9C8 /* JMChooseImageHelper.m */; };
+		D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2B21C317BA000AFA9C8 /* JMTimeHelper.m */; };
+		D06FF2BE1C317BA000AFA9C8 /* JMZoomScaleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2B51C317BA000AFA9C8 /* JMZoomScaleCell.m */; };
+		D06FF2BF1C317BA000AFA9C8 /* JMZoomScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2B71C317BA000AFA9C8 /* JMZoomScaleView.m */; };
+		D06FF2C01C317BA000AFA9C8 /* JMZoomScaleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2B81C317BA000AFA9C8 /* JMZoomScaleView.xib */; };
+		D06FF2C11C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2BA1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m */; };
+		D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D06FF2A01C317B7700AFA9C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D06FF27E1C317B7700AFA9C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D06FF2851C317B7700AFA9C8;
+			remoteInfo = JMTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D06FF2861C317B7700AFA9C8 /* JMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06FF28A1C317B7700AFA9C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D06FF28C1C317B7700AFA9C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D06FF28F1C317B7700AFA9C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D06FF2901C317B7700AFA9C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D06FF2931C317B7700AFA9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D06FF2951C317B7700AFA9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D06FF2981C317B7700AFA9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D06FF29A1C317B7700AFA9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06FF29F1C317B7700AFA9C8 /* JMToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06FF2A31C317B7700AFA9C8 /* JMToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMToolsTests.m; sourceTree = "<group>"; };
+		D06FF2A51C317B7700AFA9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06FF2AF1C317BA000AFA9C8 /* JMChooseImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMChooseImageHelper.h; sourceTree = "<group>"; };
+		D06FF2B01C317BA000AFA9C8 /* JMChooseImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMChooseImageHelper.m; sourceTree = "<group>"; };
+		D06FF2B11C317BA000AFA9C8 /* JMTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTimeHelper.h; sourceTree = "<group>"; };
+		D06FF2B21C317BA000AFA9C8 /* JMTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTimeHelper.m; sourceTree = "<group>"; };
+		D06FF2B41C317BA000AFA9C8 /* JMZoomScaleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMZoomScaleCell.h; sourceTree = "<group>"; };
+		D06FF2B51C317BA000AFA9C8 /* JMZoomScaleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMZoomScaleCell.m; sourceTree = "<group>"; };
+		D06FF2B61C317BA000AFA9C8 /* JMZoomScaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMZoomScaleView.h; sourceTree = "<group>"; };
+		D06FF2B71C317BA000AFA9C8 /* JMZoomScaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMZoomScaleView.m; sourceTree = "<group>"; };
+		D06FF2B81C317BA000AFA9C8 /* JMZoomScaleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMZoomScaleView.xib; sourceTree = "<group>"; };
+		D06FF2B91C317BA000AFA9C8 /* JMZoomScaleViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMZoomScaleViewCtrl.h; sourceTree = "<group>"; };
+		D06FF2BA1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMZoomScaleViewCtrl.m; sourceTree = "<group>"; };
+		D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMZoomScaleViewCtrl.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D06FF2831C317B7700AFA9C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06FF29C1C317B7700AFA9C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D06FF27D1C317B7700AFA9C8 = {
+			isa = PBXGroup;
+			children = (
+				D06FF2881C317B7700AFA9C8 /* JMTools */,
+				D06FF2A21C317B7700AFA9C8 /* JMToolsTests */,
+				D06FF2871C317B7700AFA9C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D06FF2871C317B7700AFA9C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D06FF2861C317B7700AFA9C8 /* JMTools.app */,
+				D06FF29F1C317B7700AFA9C8 /* JMToolsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D06FF2881C317B7700AFA9C8 /* JMTools */ = {
+			isa = PBXGroup;
+			children = (
+				D06FF28C1C317B7700AFA9C8 /* AppDelegate.h */,
+				D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */,
+				D06FF28F1C317B7700AFA9C8 /* ViewController.h */,
+				D06FF2901C317B7700AFA9C8 /* ViewController.m */,
+				D06FF2AE1C317BA000AFA9C8 /* JMTools */,
+				D06FF2921C317B7700AFA9C8 /* Main.storyboard */,
+				D06FF2951C317B7700AFA9C8 /* Assets.xcassets */,
+				D06FF2971C317B7700AFA9C8 /* LaunchScreen.storyboard */,
+				D06FF29A1C317B7700AFA9C8 /* Info.plist */,
+				D06FF2891C317B7700AFA9C8 /* Supporting Files */,
+			);
+			path = JMTools;
+			sourceTree = "<group>";
+		};
+		D06FF2891C317B7700AFA9C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D06FF28A1C317B7700AFA9C8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D06FF2A21C317B7700AFA9C8 /* JMToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D06FF2A31C317B7700AFA9C8 /* JMToolsTests.m */,
+				D06FF2A51C317B7700AFA9C8 /* Info.plist */,
+			);
+			path = JMToolsTests;
+			sourceTree = "<group>";
+		};
+		D06FF2AE1C317BA000AFA9C8 /* JMTools */ = {
+			isa = PBXGroup;
+			children = (
+				D06FF2AF1C317BA000AFA9C8 /* JMChooseImageHelper.h */,
+				D06FF2B01C317BA000AFA9C8 /* JMChooseImageHelper.m */,
+				D06FF2B11C317BA000AFA9C8 /* JMTimeHelper.h */,
+				D06FF2B21C317BA000AFA9C8 /* JMTimeHelper.m */,
+				D06FF2B31C317BA000AFA9C8 /* JMZoomScaleImages */,
+			);
+			path = JMTools;
+			sourceTree = "<group>";
+		};
+		D06FF2B31C317BA000AFA9C8 /* JMZoomScaleImages */ = {
+			isa = PBXGroup;
+			children = (
+				D06FF2B41C317BA000AFA9C8 /* JMZoomScaleCell.h */,
+				D06FF2B51C317BA000AFA9C8 /* JMZoomScaleCell.m */,
+				D06FF2B61C317BA000AFA9C8 /* JMZoomScaleView.h */,
+				D06FF2B71C317BA000AFA9C8 /* JMZoomScaleView.m */,
+				D06FF2B81C317BA000AFA9C8 /* JMZoomScaleView.xib */,
+				D06FF2B91C317BA000AFA9C8 /* JMZoomScaleViewCtrl.h */,
+				D06FF2BA1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m */,
+				D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */,
+			);
+			path = JMZoomScaleImages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D06FF2851C317B7700AFA9C8 /* JMTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06FF2A81C317B7700AFA9C8 /* Build configuration list for PBXNativeTarget "JMTools" */;
+			buildPhases = (
+				D06FF2821C317B7700AFA9C8 /* Sources */,
+				D06FF2831C317B7700AFA9C8 /* Frameworks */,
+				D06FF2841C317B7700AFA9C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JMTools;
+			productName = JMTools;
+			productReference = D06FF2861C317B7700AFA9C8 /* JMTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D06FF29E1C317B7700AFA9C8 /* JMToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06FF2AB1C317B7700AFA9C8 /* Build configuration list for PBXNativeTarget "JMToolsTests" */;
+			buildPhases = (
+				D06FF29B1C317B7700AFA9C8 /* Sources */,
+				D06FF29C1C317B7700AFA9C8 /* Frameworks */,
+				D06FF29D1C317B7700AFA9C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D06FF2A11C317B7700AFA9C8 /* PBXTargetDependency */,
+			);
+			name = JMToolsTests;
+			productName = JMToolsTests;
+			productReference = D06FF29F1C317B7700AFA9C8 /* JMToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D06FF27E1C317B7700AFA9C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = pitaya;
+				TargetAttributes = {
+					D06FF2851C317B7700AFA9C8 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D06FF29E1C317B7700AFA9C8 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D06FF2851C317B7700AFA9C8;
+					};
+				};
+			};
+			buildConfigurationList = D06FF2811C317B7700AFA9C8 /* Build configuration list for PBXProject "JMTools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D06FF27D1C317B7700AFA9C8;
+			productRefGroup = D06FF2871C317B7700AFA9C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D06FF2851C317B7700AFA9C8 /* JMTools */,
+				D06FF29E1C317B7700AFA9C8 /* JMToolsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D06FF2841C317B7700AFA9C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06FF2991C317B7700AFA9C8 /* LaunchScreen.storyboard in Resources */,
+				D06FF2961C317B7700AFA9C8 /* Assets.xcassets in Resources */,
+				D06FF2941C317B7700AFA9C8 /* Main.storyboard in Resources */,
+				D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */,
+				D06FF2C01C317BA000AFA9C8 /* JMZoomScaleView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06FF29D1C317B7700AFA9C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D06FF2821C317B7700AFA9C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06FF2BE1C317BA000AFA9C8 /* JMZoomScaleCell.m in Sources */,
+				D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */,
+				D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */,
+				D06FF28B1C317B7700AFA9C8 /* main.m in Sources */,
+				D06FF2C11C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m in Sources */,
+				D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */,
+				D06FF2BF1C317BA000AFA9C8 /* JMZoomScaleView.m in Sources */,
+				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06FF29B1C317B7700AFA9C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06FF2A41C317B7700AFA9C8 /* JMToolsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D06FF2A11C317B7700AFA9C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D06FF2851C317B7700AFA9C8 /* JMTools */;
+			targetProxy = D06FF2A01C317B7700AFA9C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D06FF2921C317B7700AFA9C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06FF2931C317B7700AFA9C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D06FF2971C317B7700AFA9C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06FF2981C317B7700AFA9C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D06FF2A61C317B7700AFA9C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D06FF2A71C317B7700AFA9C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D06FF2A91C317B7700AFA9C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JMTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D06FF2AA1C317B7700AFA9C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JMTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D06FF2AC1C317B7700AFA9C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JMToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMTools.app/JMTools";
+			};
+			name = Debug;
+		};
+		D06FF2AD1C317B7700AFA9C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JMToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMTools.app/JMTools";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D06FF2811C317B7700AFA9C8 /* Build configuration list for PBXProject "JMTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06FF2A61C317B7700AFA9C8 /* Debug */,
+				D06FF2A71C317B7700AFA9C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06FF2A81C317B7700AFA9C8 /* Build configuration list for PBXNativeTarget "JMTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06FF2A91C317B7700AFA9C8 /* Debug */,
+				D06FF2AA1C317B7700AFA9C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D06FF2AB1C317B7700AFA9C8 /* Build configuration list for PBXNativeTarget "JMToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06FF2AC1C317B7700AFA9C8 /* Debug */,
+				D06FF2AD1C317B7700AFA9C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D06FF27E1C317B7700AFA9C8 /* Project object */;
+}
