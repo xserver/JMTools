@@ -59,6 +59,8 @@
 		D06FF2B91C317BA000AFA9C8 /* JMZoomScaleViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMZoomScaleViewCtrl.h; sourceTree = "<group>"; };
 		D06FF2BA1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMZoomScaleViewCtrl.m; sourceTree = "<group>"; };
 		D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMZoomScaleViewCtrl.xib; sourceTree = "<group>"; };
+		D06FF2C31C31830C00AFA9C8 /* JMTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JMTools.podspec; sourceTree = "<group>"; };
+		D06FF2C41C31833200AFA9C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,8 @@
 		D06FF27D1C317B7700AFA9C8 = {
 			isa = PBXGroup;
 			children = (
+				D06FF2C41C31833200AFA9C8 /* README.md */,
+				D06FF2C31C31830C00AFA9C8 /* JMTools.podspec */,
 				D06FF2881C317B7700AFA9C8 /* JMTools */,
 				D06FF2A21C317B7700AFA9C8 /* JMToolsTests */,
 				D06FF2871C317B7700AFA9C8 /* Products */,
@@ -456,6 +460,7 @@
 				D06FF2AA1C317B7700AFA9C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D06FF2AB1C317B7700AFA9C8 /* Build configuration list for PBXNativeTarget "JMToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +469,7 @@
 				D06FF2AD1C317B7700AFA9C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
