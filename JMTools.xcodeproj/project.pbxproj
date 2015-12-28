@@ -21,6 +21,7 @@
 		D06FF2C01C317BA000AFA9C8 /* JMZoomScaleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2B81C317BA000AFA9C8 /* JMZoomScaleView.xib */; };
 		D06FF2C11C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2BA1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m */; };
 		D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */; };
+		D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2C71C318B0700AFA9C8 /* JMLineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMZoomScaleViewCtrl.xib; sourceTree = "<group>"; };
 		D06FF2C31C31830C00AFA9C8 /* JMTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JMTools.podspec; sourceTree = "<group>"; };
 		D06FF2C41C31833200AFA9C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D06FF2C61C318B0700AFA9C8 /* JMLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLineView.h; sourceTree = "<group>"; };
+		D06FF2C71C318B0700AFA9C8 /* JMLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 		D06FF2AE1C317BA000AFA9C8 /* JMTools */ = {
 			isa = PBXGroup;
 			children = (
+				D06FF2C61C318B0700AFA9C8 /* JMLineView.h */,
+				D06FF2C71C318B0700AFA9C8 /* JMLineView.m */,
 				D06FF2AF1C317BA000AFA9C8 /* JMChooseImageHelper.h */,
 				D06FF2B01C317BA000AFA9C8 /* JMChooseImageHelper.m */,
 				D06FF2B11C317BA000AFA9C8 /* JMTimeHelper.h */,
@@ -272,6 +277,7 @@
 				D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */,
 				D06FF2BF1C317BA000AFA9C8 /* JMZoomScaleView.m in Sources */,
 				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,
+				D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
