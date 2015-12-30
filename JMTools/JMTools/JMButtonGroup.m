@@ -23,6 +23,9 @@
 - (instancetype)initWithButtons:(NSArray *)btns; {
     if (self = [super init]) {
         _btns = [NSMutableSet setWithArray:btns];
+        for (UIButton *btn in _btns) {
+            [self addClickEvent:btn];
+        }
     }
     return self;
 }
