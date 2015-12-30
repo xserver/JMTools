@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */; };
+		38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B331C33F129003A2882 /* JMButtonGroup.m */; };
 		D06FF28B1C317B7700AFA9C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28A1C317B7700AFA9C8 /* main.m */; };
 		D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */; };
 		D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2901C317B7700AFA9C8 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		38909B111C3278FB003A2882 /* JMHoldGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHoldGestureRecognizer.h; sourceTree = "<group>"; };
 		38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHoldGestureRecognizer.m; sourceTree = "<group>"; };
+		38909B321C33F129003A2882 /* JMButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMButtonGroup.h; sourceTree = "<group>"; };
+		38909B331C33F129003A2882 /* JMButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMButtonGroup.m; sourceTree = "<group>"; };
 		D06FF2861C317B7700AFA9C8 /* JMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06FF28A1C317B7700AFA9C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D06FF28C1C317B7700AFA9C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				D06FF2C71C318B0700AFA9C8 /* JMLineView.m */,
 				D06FF2AF1C317BA000AFA9C8 /* JMChooseImageHelper.h */,
 				D06FF2B01C317BA000AFA9C8 /* JMChooseImageHelper.m */,
+				38909B321C33F129003A2882 /* JMButtonGroup.h */,
+				38909B331C33F129003A2882 /* JMButtonGroup.m */,
 				D06FF2B11C317BA000AFA9C8 /* JMTimeHelper.h */,
 				D06FF2B21C317BA000AFA9C8 /* JMTimeHelper.m */,
 				D06FF2B31C317BA000AFA9C8 /* JMZoomScaleImages */,
@@ -280,6 +285,7 @@
 				D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */,
 				D06FF28B1C317B7700AFA9C8 /* main.m in Sources */,
 				D06FF2C11C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m in Sources */,
+				38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */,
 				D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */,
 				D06FF2BF1C317BA000AFA9C8 /* JMZoomScaleView.m in Sources */,
 				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,
