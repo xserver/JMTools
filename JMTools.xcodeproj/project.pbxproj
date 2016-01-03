@@ -24,6 +24,7 @@
 		D06FF2C11C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2BA1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m */; };
 		D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */; };
 		D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2C71C318B0700AFA9C8 /* JMLineView.m */; };
+		D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		D06FF2C41C31833200AFA9C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D06FF2C61C318B0700AFA9C8 /* JMLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLineView.h; sourceTree = "<group>"; };
 		D06FF2C71C318B0700AFA9C8 /* JMLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLineView.m; sourceTree = "<group>"; };
+		D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAesHelper.h; sourceTree = "<group>"; };
+		D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAesHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 		D06FF2AE1C317BA000AFA9C8 /* JMTools */ = {
 			isa = PBXGroup;
 			children = (
+				D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */,
+				D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */,
 				D06FF2C61C318B0700AFA9C8 /* JMLineView.h */,
 				D06FF2C71C318B0700AFA9C8 /* JMLineView.m */,
 				D06FF2AF1C317BA000AFA9C8 /* JMChooseImageHelper.h */,
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */,
 				D06FF2BE1C317BA000AFA9C8 /* JMZoomScaleCell.m in Sources */,
 				38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */,
 				D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */,
