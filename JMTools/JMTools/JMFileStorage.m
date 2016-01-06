@@ -49,6 +49,30 @@
     return path;
 }
 
++ (BOOL)createDirectory:(NSString *)path {
+    
+    if ( ![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        
+        BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:path
+                                                 withIntermediateDirectories:YES
+                                                                  attributes:nil
+                                                                       error:nil];
+        return success;
+    }
+    return NO;
+}
+
++ (NSArray *)listDirectory:(NSString *)path {
+    NSMutableArray *filenamelist = [NSMutableArray arrayWithCapacity:10];
+    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
+    
+    for (NSString *filename in tmplist) {
+        [filenamelist addObject:[path stringByAppendingPathComponent:filename]];
+    }
+    
+    return filenamelist;
+}
+
 #pragma mark - self
 - (NSString *)createFilePath {
     return [JMFileStorage createTempFilePathWithDirectory:self.directory];
@@ -56,6 +80,18 @@
 
 - (NSString *)createFilePathWithSuffix:(NSString *)suffix {
     return [NSString stringWithFormat:@"%@.%@", [self createFilePath], suffix];
+}
+
+- (NSString *)copyFileToHere:(NSString *)file {
+    
+    NSError *error;
+    NSString *path = [self createFilePath];
+    if ([[NSFileManager defaultManager] copyItemAtPath:file toPath:path error:&error]) {
+        return path;
+    }
+
+    NSLog(@"error copying file: %@", [error localizedDescription]);
+    return nil;
 }
 
 #pragma mark == save

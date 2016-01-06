@@ -19,12 +19,16 @@
 + (NSString *)createTempFilePath;
 + (NSString *)createTempFilePathWithSuffix:(NSString *)suffix;
 
++ (BOOL)createDirectory:(NSString *)path;
++ (NSArray *)listDirectory:(NSString *)path;
+
 
 
 //  依赖 setup directory
 - (NSString *)createFilePath;
 - (NSString *)createFilePathWithSuffix:(NSString *)suffix;
 
+- (NSString *)copyFileToHere:(NSString *)file;
 
 
 //  support: NSData, UIImage
