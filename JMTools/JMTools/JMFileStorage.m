@@ -43,7 +43,8 @@
     NSFileManager *fm = [NSFileManager defaultManager];
     
     while(path == nil || [fm fileExistsAtPath:path]) {
-        path = [NSString stringWithFormat:@"%@/%@", directory, [[NSUUID UUID] UUIDString]];
+        
+        path = [directory stringByAppendingPathComponent:[[NSUUID UUID] UUIDString]];
     }
     
     return path;
