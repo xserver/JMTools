@@ -15,7 +15,7 @@
 - (instancetype)initWithDirectory:(NSString *)path;
 
 
-//  in NSLibraryDirectory
+//  in NSLibraryDirectory + .JMStoreDir
 + (NSString *)createTempFilePath;
 + (NSString *)createTempFilePathWithSuffix:(NSString *)suffix;
 

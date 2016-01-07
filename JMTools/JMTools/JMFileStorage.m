@@ -29,6 +29,7 @@
 + (NSString *)createTempFilePath {
     
     NSString *library = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    library = [library stringByAppendingPathComponent:@".JMStoreDir"];
     //  NSTemporaryDirectory()
     return [self createTempFilePathWithDirectory:library];
 }
