@@ -1,27 +1,21 @@
 //
-//  JMFileStorage.h
+//  JMDirectoryMan.h
 //  JMTools
 //
-//  Created by jim on 16/1/6.
+//  Created by xserver on 16/1/6.
 //  Copyright © 2016年 pitaya. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface JMFileStorage : NSObject
+//  管理一个目录
+@interface JMDirectoryMan : NSObject
 
 @property (nonatomic, copy, readonly) NSString *directory;
+@property (nonatomic, assign, readonly) long long size;
+
 
 - (instancetype)initWithDirectory:(NSString *)path;
-
-
-//  in NSLibraryDirectory + .JMStoreDir
-+ (NSString *)createTempFilePath;
-+ (NSString *)createTempFilePathWithSuffix:(NSString *)suffix;
-
-+ (BOOL)createDirectory:(NSString *)path;
-+ (NSArray *)listDirectory:(NSString *)path;
-
 
 
 //  依赖 setup directory
@@ -31,8 +25,8 @@
 - (NSString *)copyFileToHere:(NSString *)file;
 
 
-//  support: NSData, UIImage
+//  support: NSData, UIImage, 
 - (NSString *)saveObject:(id)object fileSuffix:(NSString *)suffix;
 
-//  
+
 @end

@@ -1,83 +1,42 @@
 //
-//  JMFileStorage.m
+//  JMDirectoryMan.m
 //  JMTools
 //
-//  Created by jim on 16/1/6.
+//  Created by xserver on 16/1/6.
 //  Copyright © 2016年 pitaya. All rights reserved.
 //
 
-#import "JMFileStorage.h"
 #import <UIKit/UIKit.h>
+#import "JMDirectoryMan.h"
+#import "JMFileTools.h"
 
-@interface JMFileStorage ()
+@interface JMDirectoryMan ()
 
 @property (nonatomic, copy) NSString *directory;
 
 @end
 
 
-@implementation JMFileStorage
+@implementation JMDirectoryMan
 
 - (instancetype)initWithDirectory:(NSString *)path {
     if (self = [super init]) {
         self.directory = path;
+        
+        //  创建自己
+        
     }
     return self;
 }
 
-#pragma mark == path
-+ (NSString *)createTempFilePath {
-    
-    NSString *library = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    library = [library stringByAppendingPathComponent:@".JMStoreDir"];
-    //  NSTemporaryDirectory()
-    return [self createTempFilePathWithDirectory:library];
+- (long long)size {
+    return 0;
 }
 
-+ (NSString *)createTempFilePathWithSuffix:(NSString *)suffix {
-    return [NSString stringWithFormat:@"%@.%@", [self createTempFilePath], suffix];
-}
 
-+ (NSString *)createTempFilePathWithDirectory:(NSString *)directory {
-    
-    NSString *path = nil;
-    NSFileManager *fm = [NSFileManager defaultManager];
-    
-    while(path == nil || [fm fileExistsAtPath:path]) {
-        
-        path = [directory stringByAppendingPathComponent:[[NSUUID UUID] UUIDString]];
-    }
-    
-    return path;
-}
 
-+ (BOOL)createDirectory:(NSString *)path {
-    
-    if ( ![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        
-        BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:path
-                                                 withIntermediateDirectories:YES
-                                                                  attributes:nil
-                                                                       error:nil];
-        return success;
-    }
-    return NO;
-}
-
-+ (NSArray *)listDirectory:(NSString *)path {
-    NSMutableArray *filenamelist = [NSMutableArray arrayWithCapacity:10];
-    NSArray *tmplist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
-    
-    for (NSString *filename in tmplist) {
-        [filenamelist addObject:[path stringByAppendingPathComponent:filename]];
-    }
-    
-    return filenamelist;
-}
-
-#pragma mark - self
 - (NSString *)createFilePath {
-    return [JMFileStorage createTempFilePathWithDirectory:self.directory];
+    return [JMFileTools createFilePathWithDirectory:self.directory];
 }
 
 - (NSString *)createFilePathWithSuffix:(NSString *)suffix {
