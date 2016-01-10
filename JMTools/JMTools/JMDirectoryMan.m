@@ -12,31 +12,39 @@
 
 @interface JMDirectoryMan ()
 
-@property (nonatomic, copy) NSString *directory;
+@property (nonatomic, copy) NSString *directoryPath;
 
 @end
 
 
 @implementation JMDirectoryMan
 
-- (instancetype)initWithDirectory:(NSString *)path {
+- (instancetype)initWithDirectory:(NSString *)dirPath {
+
     if (self = [super init]) {
-        self.directory = path;
         
-        //  创建自己
+        self.directoryPath = dirPath;
         
+        if ( ! [[NSFileManager defaultManager] fileExistsAtPath:dirPath]) {
+            
+            BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:dirPath
+                                                     withIntermediateDirectories:YES
+                                                                      attributes:nil
+                                                                           error:nil];
+            if (! success) {
+                self = nil;
+            }
+        }
     }
     return self;
 }
 
 - (long long)size {
-    return 0;
+    return [JMFileTools directorySizeAtPath:self.directoryPath];
 }
 
-
-
 - (NSString *)createFilePath {
-    return [JMFileTools createFilePathWithDirectory:self.directory];
+    return [JMFileTools createFilePathWithDirectory:self.directoryPath];
 }
 
 - (NSString *)createFilePathWithSuffix:(NSString *)suffix {
@@ -78,18 +86,4 @@
     return nil;
 }
 
-
-- (void)copyFileToDocuments:(NSURL *)fileURL {
-    
-//    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-
-//    NSError	*error;
-//    [[NSFileManager defaultManager] copyItemAtURL:fileURL toURL:[NSURL fileURLWithPath:destinationPath] error:&error];
-    
-//    - (BOOL)copyItemAtURL:(NSURL *)srcURL toURL:(NSURL *)dstURL error:(NSError **)error NS_AVAILABLE(10_6, 4_0);
-//    - (BOOL)moveItemAtURL:(NSURL *)srcURL toURL:(NSURL *)dstURL error:(NSError **)error NS_AVAILABLE(10_6, 4_0);
-    
-//    - (BOOL)copyItemAtPath:(NSString *)srcPath toPath:(NSString *)dstPath error:(NSError **)error NS_AVAILABLE(10_5, 2_0);
-//    - (BOOL)moveItemAtPath:(NSString *)srcPath toPath:(NSString *)dstPath error:(NSError **)error NS_AVAILABLE(10_5, 2_0);
-}
 @end

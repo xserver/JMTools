@@ -11,11 +11,11 @@
 //  管理一个目录
 @interface JMDirectoryMan : NSObject
 
-@property (nonatomic, copy, readonly) NSString *directory;
+@property (nonatomic, copy, readonly) NSString *directoryPath;
 @property (nonatomic, assign, readonly) long long size;
 
 
-- (instancetype)initWithDirectory:(NSString *)path;
+- (instancetype)initWithDirectory:(NSString *)dirPath;
 
 
 //  依赖 setup directory
