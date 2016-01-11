@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		385752A81C41F92100325909 /* JMFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 385752A71C41F92100325909 /* JMFileTools.m */; };
+		385752AE1C4352DC00325909 /* JMCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 385752AD1C4352DC00325909 /* JMCountdownButton.m */; };
 		38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */; };
 		38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B331C33F129003A2882 /* JMButtonGroup.m */; };
 		38E050AE1C3CA9AF00BD2FE4 /* JMDirectoryMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */; };
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		385752A61C41F92100325909 /* JMFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMFileTools.h; sourceTree = "<group>"; };
 		385752A71C41F92100325909 /* JMFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMFileTools.m; sourceTree = "<group>"; };
+		385752AC1C4352DC00325909 /* JMCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCountdownButton.h; sourceTree = "<group>"; };
+		385752AD1C4352DC00325909 /* JMCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCountdownButton.m; sourceTree = "<group>"; };
 		38909B111C3278FB003A2882 /* JMHoldGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHoldGestureRecognizer.h; sourceTree = "<group>"; };
 		38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHoldGestureRecognizer.m; sourceTree = "<group>"; };
 		38909B321C33F129003A2882 /* JMButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMButtonGroup.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 		D06FF2AE1C317BA000AFA9C8 /* JMTools */ = {
 			isa = PBXGroup;
 			children = (
+				385752AC1C4352DC00325909 /* JMCountdownButton.h */,
+				385752AD1C4352DC00325909 /* JMCountdownButton.m */,
 				D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */,
 				D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */,
 				D06FF2C61C318B0700AFA9C8 /* JMLineView.h */,
@@ -306,6 +311,7 @@
 				D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */,
 				D06FF2BF1C317BA000AFA9C8 /* JMZoomScaleView.m in Sources */,
 				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,
+				385752AE1C4352DC00325909 /* JMCountdownButton.m in Sources */,
 				385752A81C41F92100325909 /* JMFileTools.m in Sources */,
 				D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */,
 			);
