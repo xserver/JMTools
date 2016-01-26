@@ -12,6 +12,7 @@
 		38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */; };
 		38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B331C33F129003A2882 /* JMButtonGroup.m */; };
 		38E050AE1C3CA9AF00BD2FE4 /* JMDirectoryMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */; };
+		D060B8AE1C57CEC8007F9DC0 /* JMBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */; };
 		D06FF28B1C317B7700AFA9C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28A1C317B7700AFA9C8 /* main.m */; };
 		D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */; };
 		D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2901C317B7700AFA9C8 /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		38909B331C33F129003A2882 /* JMButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMButtonGroup.m; sourceTree = "<group>"; };
 		38E050AC1C3CA9AE00BD2FE4 /* JMDirectoryMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDirectoryMan.h; sourceTree = "<group>"; };
 		38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDirectoryMan.m; sourceTree = "<group>"; };
+		D060B8AC1C57CEC8007F9DC0 /* JMBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMBannerView.h; sourceTree = "<group>"; };
+		D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMBannerView.m; sourceTree = "<group>"; };
 		D06FF2861C317B7700AFA9C8 /* JMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06FF28A1C317B7700AFA9C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D06FF28C1C317B7700AFA9C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */,
 				385752A61C41F92100325909 /* JMFileTools.h */,
 				385752A71C41F92100325909 /* JMFileTools.m */,
+				D060B8AC1C57CEC8007F9DC0 /* JMBannerView.h */,
+				D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */,
 			);
 			path = JMTools;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */,
+				D060B8AE1C57CEC8007F9DC0 /* JMBannerView.m in Sources */,
 				D06FF2BE1C317BA000AFA9C8 /* JMZoomScaleCell.m in Sources */,
 				38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */,
 				D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */,
