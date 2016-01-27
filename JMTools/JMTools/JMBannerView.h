@@ -10,18 +10,17 @@
 
 @protocol JMBannerViewConfig;
 
-@interface JMBannerView : UICollectionView
+@interface JMBannerView : UIView
 
-@property (nonatomic, strong, readonly, nonnull) UIPageControl *pageControl;
+@property (nonatomic, strong, readonly, nonnull) UIPageControl *pageControl;    //  custom colors
+@property (nonatomic, strong, readonly, nonnull) UICollectionView *collectionView;
+
 @property (nonatomic, assign) CGFloat nextItemInterval; //  default 2.0f
 
-+ (instancetype)bannerWithSize:(CGSize)size config:(id<JMBannerViewConfig>)config;
++ (instancetype)bannerWithSize:(CGSize)size config:(nonnull id<JMBannerViewConfig>)config;
 
-- (void)setup;
-
-
-- (void)registerClass:(nullable Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
-- (void)registerNib:(nullable UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier;
+- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
+- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier;
 
 @end
 
@@ -30,7 +29,14 @@
 
 @required
 - (NSInteger)bannerCount;
-- (void)bannerView:(JMBannerView *)banner willDisplayCell:(UICollectionViewCell *)cell atIndex:(NSInteger)index;
-- (void)bannerView:(JMBannerView *)banner didSelectItemAtIndex:(NSInteger)index;
+- (void)bannerView:(nonnull JMBannerView *)banner willDisplayCell:(UICollectionViewCell *)cell atIndex:(NSInteger)index;
+- (void)bannerView:(nonnull JMBannerView *)banner didSelectItemAtIndex:(NSInteger)index;
+
+@end
+
+
+@interface JMBannerCell : UICollectionViewCell
+
+@property (nonatomic, strong, nonnull) UIImageView *imageView;
 
 @end

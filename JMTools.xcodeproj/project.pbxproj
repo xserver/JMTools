@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		385752A81C41F92100325909 /* JMFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 385752A71C41F92100325909 /* JMFileTools.m */; };
 		385752AE1C4352DC00325909 /* JMCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 385752AD1C4352DC00325909 /* JMCountdownButton.m */; };
+		386B479B1C586BD800A9F1B1 /* JMExampleBannerCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B47991C586BD800A9F1B1 /* JMExampleBannerCtrl.m */; };
+		386B479C1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386B479A1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib */; };
+		387A2BDF1C5872A200C1E262 /* JMExampleTableCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 387A2BDE1C5872A200C1E262 /* JMExampleTableCtrl.m */; };
+		387A2BE11C58A65900C1E262 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387A2BE01C58A65900C1E262 /* Images.xcassets */; };
 		38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */; };
 		38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B331C33F129003A2882 /* JMButtonGroup.m */; };
 		38E050AE1C3CA9AF00BD2FE4 /* JMDirectoryMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */; };
+		691BCB02BB5F2ACB5E05A3FF /* libPods-JMTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C05D4BBF02A2DA0C823BA3E5 /* libPods-JMTools.a */; };
 		D060B8AE1C57CEC8007F9DC0 /* JMBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */; };
 		D06FF28B1C317B7700AFA9C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28A1C317B7700AFA9C8 /* main.m */; };
 		D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */; };
-		D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2901C317B7700AFA9C8 /* ViewController.m */; };
 		D06FF2941C317B7700AFA9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2921C317B7700AFA9C8 /* Main.storyboard */; };
 		D06FF2961C317B7700AFA9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2951C317B7700AFA9C8 /* Assets.xcassets */; };
 		D06FF2991C317B7700AFA9C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2971C317B7700AFA9C8 /* LaunchScreen.storyboard */; };
@@ -46,20 +50,27 @@
 		385752A71C41F92100325909 /* JMFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMFileTools.m; sourceTree = "<group>"; };
 		385752AC1C4352DC00325909 /* JMCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCountdownButton.h; sourceTree = "<group>"; };
 		385752AD1C4352DC00325909 /* JMCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCountdownButton.m; sourceTree = "<group>"; };
+		386B47981C586BD800A9F1B1 /* JMExampleBannerCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExampleBannerCtrl.h; sourceTree = "<group>"; };
+		386B47991C586BD800A9F1B1 /* JMExampleBannerCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExampleBannerCtrl.m; sourceTree = "<group>"; };
+		386B479A1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMExampleBannerCtrl.xib; sourceTree = "<group>"; };
+		387A2BDD1C5872A200C1E262 /* JMExampleTableCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExampleTableCtrl.h; sourceTree = "<group>"; };
+		387A2BDE1C5872A200C1E262 /* JMExampleTableCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExampleTableCtrl.m; sourceTree = "<group>"; };
+		387A2BE01C58A65900C1E262 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38909B111C3278FB003A2882 /* JMHoldGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHoldGestureRecognizer.h; sourceTree = "<group>"; };
 		38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHoldGestureRecognizer.m; sourceTree = "<group>"; };
 		38909B321C33F129003A2882 /* JMButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMButtonGroup.h; sourceTree = "<group>"; };
 		38909B331C33F129003A2882 /* JMButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMButtonGroup.m; sourceTree = "<group>"; };
 		38E050AC1C3CA9AE00BD2FE4 /* JMDirectoryMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDirectoryMan.h; sourceTree = "<group>"; };
 		38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDirectoryMan.m; sourceTree = "<group>"; };
+		5A8C471E68E538402A27A60E /* Pods-JMTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JMTools/Pods-JMTools.debug.xcconfig"; sourceTree = "<group>"; };
+		85F986BEF66368EE13B865A2 /* Pods-JMTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-JMTools/Pods-JMTools.release.xcconfig"; sourceTree = "<group>"; };
+		C05D4BBF02A2DA0C823BA3E5 /* libPods-JMTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JMTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D060B8AC1C57CEC8007F9DC0 /* JMBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMBannerView.h; sourceTree = "<group>"; };
 		D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMBannerView.m; sourceTree = "<group>"; };
 		D06FF2861C317B7700AFA9C8 /* JMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06FF28A1C317B7700AFA9C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D06FF28C1C317B7700AFA9C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D06FF28F1C317B7700AFA9C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D06FF2901C317B7700AFA9C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D06FF2931C317B7700AFA9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D06FF2951C317B7700AFA9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06FF2981C317B7700AFA9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691BCB02BB5F2ACB5E05A3FF /* libPods-JMTools.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,14 +117,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3216610FE8D6A7C8C1B4C5A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A8C471E68E538402A27A60E /* Pods-JMTools.debug.xcconfig */,
+				85F986BEF66368EE13B865A2 /* Pods-JMTools.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		386B47971C586B8D00A9F1B1 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				386B47981C586BD800A9F1B1 /* JMExampleBannerCtrl.h */,
+				386B47991C586BD800A9F1B1 /* JMExampleBannerCtrl.m */,
+				386B479A1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib */,
+			);
+			name = Example;
+			path = JMTools/Example;
+			sourceTree = "<group>";
+		};
 		D06FF27D1C317B7700AFA9C8 = {
 			isa = PBXGroup;
 			children = (
 				D06FF2C41C31833200AFA9C8 /* README.md */,
 				D06FF2C31C31830C00AFA9C8 /* JMTools.podspec */,
+				387A2BE01C58A65900C1E262 /* Images.xcassets */,
+				386B47971C586B8D00A9F1B1 /* Example */,
 				D06FF2881C317B7700AFA9C8 /* JMTools */,
 				D06FF2A21C317B7700AFA9C8 /* JMToolsTests */,
 				D06FF2871C317B7700AFA9C8 /* Products */,
+				3216610FE8D6A7C8C1B4C5A9 /* Pods */,
+				DDE6491E9E1F8143B2F88AFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,14 +166,14 @@
 			children = (
 				D06FF28C1C317B7700AFA9C8 /* AppDelegate.h */,
 				D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */,
-				D06FF28F1C317B7700AFA9C8 /* ViewController.h */,
-				D06FF2901C317B7700AFA9C8 /* ViewController.m */,
 				D06FF2AE1C317BA000AFA9C8 /* JMTools */,
 				D06FF2921C317B7700AFA9C8 /* Main.storyboard */,
 				D06FF2951C317B7700AFA9C8 /* Assets.xcassets */,
 				D06FF2971C317B7700AFA9C8 /* LaunchScreen.storyboard */,
 				D06FF29A1C317B7700AFA9C8 /* Info.plist */,
 				D06FF2891C317B7700AFA9C8 /* Supporting Files */,
+				387A2BDD1C5872A200C1E262 /* JMExampleTableCtrl.h */,
+				387A2BDE1C5872A200C1E262 /* JMExampleTableCtrl.m */,
 			);
 			path = JMTools;
 			sourceTree = "<group>";
@@ -202,6 +238,14 @@
 			path = JMZoomScaleImages;
 			sourceTree = "<group>";
 		};
+		DDE6491E9E1F8143B2F88AFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C05D4BBF02A2DA0C823BA3E5 /* libPods-JMTools.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D06FF2A81C317B7700AFA9C8 /* Build configuration list for PBXNativeTarget "JMTools" */;
 			buildPhases = (
+				1D1EBD9BFDCC886F350DC5F5 /* Check Pods Manifest.lock */,
 				D06FF2821C317B7700AFA9C8 /* Sources */,
 				D06FF2831C317B7700AFA9C8 /* Frameworks */,
 				D06FF2841C317B7700AFA9C8 /* Resources */,
+				1CF6EC0958444F81D01355A7 /* Embed Pods Frameworks */,
+				21C215E2984F2B4E4845259A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +293,7 @@
 		D06FF27E1C317B7700AFA9C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JM;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = pitaya;
 				TargetAttributes = {
@@ -284,8 +332,10 @@
 			files = (
 				D06FF2991C317B7700AFA9C8 /* LaunchScreen.storyboard in Resources */,
 				D06FF2961C317B7700AFA9C8 /* Assets.xcassets in Resources */,
+				387A2BE11C58A65900C1E262 /* Images.xcassets in Resources */,
 				D06FF2941C317B7700AFA9C8 /* Main.storyboard in Resources */,
 				D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */,
+				386B479C1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib in Resources */,
 				D06FF2C01C317BA000AFA9C8 /* JMZoomScaleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,16 +349,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CF6EC0958444F81D01355A7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JMTools/Pods-JMTools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D1EBD9BFDCC886F350DC5F5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		21C215E2984F2B4E4845259A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JMTools/Pods-JMTools-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D06FF2821C317B7700AFA9C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */,
+				387A2BDF1C5872A200C1E262 /* JMExampleTableCtrl.m in Sources */,
 				D060B8AE1C57CEC8007F9DC0 /* JMBannerView.m in Sources */,
 				D06FF2BE1C317BA000AFA9C8 /* JMZoomScaleCell.m in Sources */,
 				38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */,
-				D06FF2911C317B7700AFA9C8 /* ViewController.m in Sources */,
 				D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */,
 				D06FF28B1C317B7700AFA9C8 /* main.m in Sources */,
 				38E050AE1C3CA9AF00BD2FE4 /* JMDirectoryMan.m in Sources */,
@@ -316,6 +414,7 @@
 				38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */,
 				D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */,
 				D06FF2BF1C317BA000AFA9C8 /* JMZoomScaleView.m in Sources */,
+				386B479B1C586BD800A9F1B1 /* JMExampleBannerCtrl.m in Sources */,
 				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,
 				385752AE1C4352DC00325909 /* JMCountdownButton.m in Sources */,
 				385752A81C41F92100325909 /* JMFileTools.m in Sources */,
@@ -445,6 +544,7 @@
 		};
 		D06FF2A91C317B7700AFA9C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A8C471E68E538402A27A60E /* Pods-JMTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JMTools/Info.plist;
@@ -456,6 +556,7 @@
 		};
 		D06FF2AA1C317B7700AFA9C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85F986BEF66368EE13B865A2 /* Pods-JMTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JMTools/Info.plist;

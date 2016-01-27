@@ -7,11 +7,14 @@
 //
 
 #import "JMBannerView.h"
+#import <Masonry.h>
 
 @interface JMBannerView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, weak) id config;
 @property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 
 @property (copy  , nonatomic) NSString *cellIdentifier;
 
@@ -23,42 +26,37 @@
 
 @implementation JMBannerView
 
-+ (instancetype)bannerWithSize:(CGSize)size config:(id<JMBannerViewConfig>)config {
++ (instancetype)bannerWithSize:(CGSize)size config:(nonnull id<JMBannerViewConfig>)config {
     
-    JMBannerView *banner = [[JMBannerView alloc] initWithFrame:CGRectZero
-                                          collectionViewLayout:[JMBannerView layoutWithSize:size]];
-    banner.pagingEnabled = YES;
-    banner.showsHorizontalScrollIndicator = NO;
-    banner.showsVerticalScrollIndicator = NO;
-    banner.bounces = NO;
-    
-    banner.dataSource = banner;
-    banner.delegate = banner;
+    JMBannerView *banner = [[JMBannerView alloc] initWithSize:size];
     banner.config = config;
+    [banner setup];
     return banner;
 }
 
-- (void)setup {
-    
-    if ([_config respondsToSelector:@selector(bannerCount)]) {
+- (id)initWithSize:(CGSize)size {
+    if (self = [super init]) {
         
-        NSInteger count = [_config bannerCount];
-        self.pageControl.numberOfPages = count;
-        self.realCount = count;
-        self.inventCount = count * 100;
-    }
-
-    [self scrollToHalfLocation];
-    [self addTimer];
-}
-
-- (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+        self.layout = [JMBannerView layoutWithSize:size];
+        
         _nextItemInterval = 2.0f;
-        [self addSubview:self.pageControl];
-        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeTimer) name:UIApplicationWillEnterForegroundNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addTimer) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        
+        self.backgroundColor = [UIColor brownColor];
+        
+        [self addSubview:self.collectionView];
+        [self addSubview:self.pageControl];
+        
+        [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self);
+            make.bottom.equalTo(self).offset(-2);
+            make.height.equalTo(@16);
+        }];
+        
+        [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
     }
     return self;
 }
@@ -68,27 +66,57 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)registerClass:(nullable Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier {
+- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier {
     self.cellIdentifier = identifier;
-    [super registerClass:cellClass forCellWithReuseIdentifier:identifier];
+    [_collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
 }
 
-- (void)registerNib:(nullable UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier {
+- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier {
     self.cellIdentifier = identifier;
-    [super registerNib:nib forCellWithReuseIdentifier:identifier];
+    [_collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
+}
+
+- (void)setup {
+    
+    if ([_config respondsToSelector:@selector(bannerCount)]) {
+        
+        NSInteger count = [_config bannerCount];
+        _pageControl.numberOfPages = count;
+        self.realCount = count;
+        self.inventCount = count * 100;
+    }
+    
+    [self scrollToHalfLocation];
+    [self addTimer];
 }
 
 #pragma mark - Get
 - (UIPageControl *)pageControl {
     if (_pageControl == nil) {
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame) - 20, CGRectGetWidth(self.frame), 20)];
+        _pageControl = [[UIPageControl alloc] init];
         
         _pageControl.backgroundColor = [UIColor clearColor];
         _pageControl.pageIndicatorTintColor = [UIColor blackColor];
-        _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
         _pageControl.currentPage = 0;
     }
     return _pageControl;
+}
+
+- (UICollectionView *)collectionView {
+    if (_collectionView == nil) {
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
+        _collectionView.backgroundColor = [UIColor blueColor];
+        _collectionView.contentInset = UIEdgeInsetsZero;
+        _collectionView.pagingEnabled = YES;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        _collectionView.bounces = NO;
+        
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+    }
+    return _collectionView;
 }
 
 + (UICollectionViewFlowLayout *)layoutWithSize:(CGSize)size {
@@ -115,8 +143,7 @@
 }
 
 - (void)scrollNextPage {
-    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
-    NSInteger index = self.contentOffset.x / layout.itemSize.width + 1;
+    NSInteger index = _collectionView.contentOffset.x / self.layout.itemSize.width + 1;
     
     if (index >= _inventCount) {
         return;
@@ -126,7 +153,7 @@
         [self scrollToHalfLocation];
     }else{
         NSIndexPath *ip = [NSIndexPath indexPathForItem:index inSection:0];
-        [self scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+        [_collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     }
 }
 
@@ -134,7 +161,7 @@
     
     NSInteger index = _inventCount * 0.5;
     NSIndexPath *ip = [NSIndexPath indexPathForItem:index inSection:0];
-    [self scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    [_collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
 }
 
 #pragma mark - Timer
@@ -167,14 +194,13 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSInteger index = [self realIndexWithRow:indexPath.row];
+    _pageControl.currentPage = index;
     
     id cell = [collectionView dequeueReusableCellWithReuseIdentifier:_cellIdentifier forIndexPath:indexPath];
     
     if ([_config respondsToSelector:@selector(bannerView:willDisplayCell:atIndex:)]) {
-        
-        NSInteger index = [self realIndexWithRow:indexPath.row];
-        self.pageControl.currentPage = index;
-        
         [_config bannerView:self willDisplayCell:cell atIndex:index];
     }
     
@@ -188,5 +214,26 @@
         [_config bannerView:self didSelectItemAtIndex:[self realIndexWithRow:indexPath.row]];
     }
 }
+
+@end
+
+
+
+#pragma mark
+@implementation JMBannerCell
+
+- (instancetype)initWithFrame:(CGRect)frame {
+
+    if (self = [super initWithFrame:frame]) {
+        
+        self.imageView = [[UIImageView alloc] init];
+        [self.contentView addSubview:self.imageView];
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView);
+        }];
+    }
+    return self;
+}
+
 
 @end
