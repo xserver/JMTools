@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol JMBannerViewConfig;
+@protocol JMBannerViewDelegate;
 
 @interface JMBannerView : UIView
 
@@ -17,7 +17,9 @@
 
 @property (nonatomic, assign) CGFloat nextItemInterval; //  default 2.0f
 
-+ (instancetype)bannerWithSize:(CGSize)size config:(nonnull id<JMBannerViewConfig>)config;
++ (instancetype)bannerWithSize:(CGSize)size delegate:(nonnull id<JMBannerViewDelegate>)delegate;
+
+- (void)start;
 
 - (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
 - (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier;
@@ -25,7 +27,7 @@
 @end
 
 
-@protocol JMBannerViewConfig <NSObject>
+@protocol JMBannerViewDelegate <NSObject>
 
 @required
 - (NSInteger)bannerCount;

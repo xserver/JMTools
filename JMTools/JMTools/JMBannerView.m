@@ -11,7 +11,7 @@
 
 @interface JMBannerView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, weak) id config;
+@property (nonatomic, weak) id delegate;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
@@ -26,11 +26,10 @@
 
 @implementation JMBannerView
 
-+ (instancetype)bannerWithSize:(CGSize)size config:(nonnull id<JMBannerViewConfig>)config {
++ (instancetype)bannerWithSize:(CGSize)size delegate:(nonnull id<JMBannerViewDelegate>)delegate {
     
     JMBannerView *banner = [[JMBannerView alloc] initWithSize:size];
-    banner.config = config;
-    [banner setup];
+    banner.delegate = delegate;
     return banner;
 }
 
@@ -76,18 +75,20 @@
     [_collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
 }
 
-- (void)setup {
+- (void)start {
     
-    if ([_config respondsToSelector:@selector(bannerCount)]) {
+    if ([_delegate respondsToSelector:@selector(bannerCount)]) {
         
-        NSInteger count = [_config bannerCount];
-        _pageControl.numberOfPages = count;
-        self.realCount = count;
-        self.inventCount = count * 100;
+        NSInteger count = [_delegate bannerCount];
+        if (count > 2) {
+            _pageControl.numberOfPages = count;
+            self.realCount = count;
+            self.inventCount = count * 100;
+            
+            [self scrollToHalfLocation];
+            [self addTimer];
+        }
     }
-    
-    [self scrollToHalfLocation];
-    [self addTimer];
 }
 
 #pragma mark - Get
@@ -200,8 +201,8 @@
     
     id cell = [collectionView dequeueReusableCellWithReuseIdentifier:_cellIdentifier forIndexPath:indexPath];
     
-    if ([_config respondsToSelector:@selector(bannerView:willDisplayCell:atIndex:)]) {
-        [_config bannerView:self willDisplayCell:cell atIndex:index];
+    if ([_delegate respondsToSelector:@selector(bannerView:willDisplayCell:atIndex:)]) {
+        [_delegate bannerView:self willDisplayCell:cell atIndex:index];
     }
     
     return cell;
@@ -210,8 +211,8 @@
 #pragma mark == UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([_config respondsToSelector:@selector(bannerView:didSelectItemAtIndex:)]) {
-        [_config bannerView:self didSelectItemAtIndex:[self realIndexWithRow:indexPath.row]];
+    if ([_delegate respondsToSelector:@selector(bannerView:didSelectItemAtIndex:)]) {
+        [_delegate bannerView:self didSelectItemAtIndex:[self realIndexWithRow:indexPath.row]];
     }
 }
 

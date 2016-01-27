@@ -10,7 +10,7 @@
 #import "JMBannerView.h"
 #import <Masonry.h>
 
-@interface JMExampleBannerCtrl () <JMBannerViewConfig>
+@interface JMExampleBannerCtrl () <JMBannerViewDelegate>
 @property (nonatomic, strong) JMBannerView *banner;
 @property (nonatomic, strong) NSArray *images;
 @end
@@ -27,7 +27,7 @@
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = CGSizeMake(bounds.size.width, bounds.size.width*0.5);
     
-    _banner = [JMBannerView bannerWithSize:size config:self];
+    _banner = [JMBannerView bannerWithSize:size delegate:self];
     
     [_banner registerClass:[JMBannerCell class] forCellWithReuseIdentifier:@"bannerCellID"];
     
@@ -37,6 +37,8 @@
         make.top.left.right.equalTo(self.view);
         make.height.equalTo(self.view.mas_width).multipliedBy(0.5);
     }];
+    
+    [_banner start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - JMBannerViewConfig
+#pragma mark - JMBannerViewDelegate
 - (NSInteger)bannerCount {
     return self.images.count;
 }
