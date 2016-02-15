@@ -11,7 +11,6 @@
 
 @interface JMBannerView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, weak) id delegate;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
@@ -26,14 +25,8 @@
 
 @implementation JMBannerView
 
-+ (instancetype)bannerWithSize:(CGSize)size delegate:(nonnull id<JMBannerViewDelegate>)delegate {
-    
-    JMBannerView *banner = [[JMBannerView alloc] initWithSize:size];
-    banner.delegate = delegate;
-    return banner;
-}
+- (nonnull instancetype)initWithSize:(CGSize)size {
 
-- (id)initWithSize:(CGSize)size {
     if (self = [super init]) {
         
         self.layout = [JMBannerView layoutWithSize:size];
@@ -41,8 +34,6 @@
         _nextItemInterval = 2.0f;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeTimer) name:UIApplicationWillEnterForegroundNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addTimer) name:UIApplicationDidEnterBackgroundNotification object:nil];
-        
-        self.backgroundColor = [UIColor brownColor];
         
         [self addSubview:self.collectionView];
         [self addSubview:self.pageControl];
@@ -65,12 +56,12 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier {
+- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(nonnull NSString *)identifier {
     self.cellIdentifier = identifier;
     [_collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
 }
 
-- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier {
+- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(nonnull NSString *)identifier {
     self.cellIdentifier = identifier;
     [_collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
 }

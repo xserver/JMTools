@@ -27,10 +27,8 @@
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = CGSizeMake(bounds.size.width, bounds.size.width*0.5);
     
-    _banner = [JMBannerView bannerWithSize:size delegate:self];
-    
+    _banner = [[JMBannerView alloc] initWithSize:size];
     [_banner registerClass:[JMBannerCell class] forCellWithReuseIdentifier:@"bannerCellID"];
-    
     [self.view addSubview:_banner];
     
     [_banner mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,7 +49,7 @@
     return self.images.count;
 }
 
-- (void)bannerView:(JMBannerView *)banner willDisplayCell:(UICollectionViewCell *)acell atIndex:(NSInteger)index {
+- (void)bannerView:(JMBannerView *)banner willDisplayCell:(nonnull UICollectionViewCell *)acell atIndex:(NSInteger)index {
 
     JMBannerCell *cell = (JMBannerCell *)acell;
     cell.imageView.image = self.images[index];

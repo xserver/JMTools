@@ -17,12 +17,14 @@
 
 @property (nonatomic, assign) CGFloat nextItemInterval; //  default 2.0f
 
-+ (instancetype)bannerWithSize:(CGSize)size delegate:(nonnull id<JMBannerViewDelegate>)delegate;
+@property (nonatomic, weak) id<JMBannerViewDelegate> delegate;
+
+- (nonnull instancetype)initWithSize:(CGSize)size;
 
 - (void)start;
 
-- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
-- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier;
+- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(nonnull NSString *)identifier;
+- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(nonnull NSString *)identifier;
 
 @end
 
@@ -31,7 +33,7 @@
 
 @required
 - (NSInteger)bannerCount;
-- (void)bannerView:(nonnull JMBannerView *)banner willDisplayCell:(UICollectionViewCell *)cell atIndex:(NSInteger)index;
+- (void)bannerView:(nonnull JMBannerView *)banner willDisplayCell:(nonnull UICollectionViewCell *)cell atIndex:(NSInteger)index;
 - (void)bannerView:(nonnull JMBannerView *)banner didSelectItemAtIndex:(NSInteger)index;
 
 @end
