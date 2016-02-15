@@ -25,15 +25,28 @@
 
 @implementation JMBannerView
 
-- (nonnull instancetype)initWithSize:(CGSize)size {
-
-    if (self = [super init]) {
-        
-        self.layout = [JMBannerView layoutWithSize:size];
-        
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    if (self = [super initWithFrame:frame]) {
         _nextItemInterval = 2.0f;
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeTimer) name:UIApplicationWillEnterForegroundNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addTimer) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [self removeTimer];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)setupWithSize:(CGSize)size {
+
+    if ( ! self.layout) {
+        
+        self.layout = [JMBannerView layoutWithSize:size];
         
         [self addSubview:self.collectionView];
         [self addSubview:self.pageControl];
@@ -48,22 +61,6 @@
             make.edges.equalTo(self);
         }];
     }
-    return self;
-}
-
-- (void)dealloc {
-    [self removeTimer];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(nonnull NSString *)identifier {
-    self.cellIdentifier = identifier;
-    [_collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
-}
-
-- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(nonnull NSString *)identifier {
-    self.cellIdentifier = identifier;
-    [_collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
 }
 
 - (void)start {
@@ -80,6 +77,16 @@
             [self addTimer];
         }
     }
+}
+
+- (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(nonnull NSString *)identifier {
+    self.cellIdentifier = identifier;
+    [_collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
+}
+
+- (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(nonnull NSString *)identifier {
+    self.cellIdentifier = identifier;
+    [_collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
 }
 
 #pragma mark - Get

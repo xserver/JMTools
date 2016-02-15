@@ -27,7 +27,9 @@
     CGRect bounds = [[UIScreen mainScreen] bounds];
     CGSize size = CGSizeMake(bounds.size.width, bounds.size.width*0.5);
     
-    _banner = [[JMBannerView alloc] initWithSize:size];
+    _banner = [[JMBannerView alloc] init];
+    [_banner setupWithSize:size];
+    
     [_banner registerClass:[JMBannerCell class] forCellWithReuseIdentifier:@"bannerCellID"];
     [self.view addSubview:_banner];
     

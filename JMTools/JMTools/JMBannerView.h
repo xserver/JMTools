@@ -19,8 +19,8 @@
 
 @property (nonatomic, weak) id<JMBannerViewDelegate> delegate;
 
-- (nonnull instancetype)initWithSize:(CGSize)size;
-
+//  初始化视图
+- (void)setupWithSize:(CGSize)size;
 - (void)start;
 
 - (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(nonnull NSString *)identifier;
