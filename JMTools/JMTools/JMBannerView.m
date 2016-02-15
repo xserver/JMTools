@@ -81,12 +81,12 @@
 
 - (void)registerClass:(nonnull Class)cellClass forCellWithReuseIdentifier:(nonnull NSString *)identifier {
     self.cellIdentifier = identifier;
-    [_collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
+    [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
 }
 
 - (void)registerNib:(nonnull UINib *)nib forCellWithReuseIdentifier:(nonnull NSString *)identifier {
     self.cellIdentifier = identifier;
-    [_collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
 }
 
 #pragma mark - Get
