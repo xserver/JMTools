@@ -68,13 +68,23 @@
     if ([_delegate respondsToSelector:@selector(bannerCount)]) {
         
         NSInteger count = [_delegate bannerCount];
-        if (count > 2) {
-            _pageControl.numberOfPages = count;
-            self.realCount = count;
+        self.realCount = count;
+        
+        if (count >= 2) {
             self.inventCount = count * 100;
-            
+            _pageControl.numberOfPages = count;
+            [self.collectionView reloadData];
             [self scrollToHalfLocation];
             [self addTimer];
+        }
+        if (count == 1) {
+            self.inventCount = count;
+            _pageControl.numberOfPages = 0;
+            [self removeTimer];
+        }
+        if (count == 0) {
+            self.inventCount = count;
+            [self removeTimer];
         }
     }
 }
