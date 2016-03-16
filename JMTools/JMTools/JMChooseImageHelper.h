@@ -15,9 +15,18 @@
 @property (assign, nonatomic) BOOL onlyUseCamera;   //  default NO
 @property (assign, nonatomic) BOOL onlyUsePhoto;    //  default NO
 
-//  权限提醒
-+ (instancetype)makeWithController:(UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate> *)ctrl;
+
+@property (nonatomic, strong) UIImagePickerController *imagePicker;   //  选完照片后附上，close 时，置 nil
+@property (nonatomic, strong) UIImage *originalImage;     //  选完照片后附上，close 时，置 nil
+
+@property (nonatomic, copy) void(^resultImage)(JMChooseImageHelper *helper, NSDictionary *info);
+
+
+
++ (JMChooseImageHelper *)shared;
 
 - (void)show;
+- (void)close;
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "JMExampleTableCtrl.h"
 #import "JMExampleBannerCtrl.h"
+#import "JMChooseImageHelper.h"
 
 @interface JMExampleTableCtrl ()
 @property (nonatomic, strong) NSArray *list;
@@ -25,7 +26,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    self.list = @[@"Banner"];
+    self.list = @[@"Banner",
+                  @"JMChooseImageHelper",
+                  ];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,8 +56,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    [self.navigationController pushViewController:[[JMExampleBannerCtrl alloc] init] animated:YES];
-    
+    if ([self.list[indexPath.row] isEqualToString:@"Banner"]) {
+        [self.navigationController pushViewController:[[JMExampleBannerCtrl alloc] init] animated:YES];
+    }
+    else if ([self.list[indexPath.row] isEqualToString:@"JMChooseImageHelper"]) {
+        
+        [JMChooseImageHelper shared].resultImage = ^(JMChooseImageHelper *helper, NSDictionary *info) {
+            
+            NSLog(@"%@", helper.originalImage);
+            
+            NSLog(@"%@", helper.imagePicker);
+            
+            [helper close];
+        };
+        [[JMChooseImageHelper shared] show];
+    }
 }
+
+
 @end
