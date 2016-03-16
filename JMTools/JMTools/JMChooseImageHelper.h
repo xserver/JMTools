@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) UIImagePickerController *imagePicker;   //  选完照片后附上，close 时，置 nil
 @property (nonatomic, strong) UIImage *originalImage;     //  选完照片后附上，close 时，置 nil
+@property (nonatomic, strong) UIImage *editedImage;       //  选完照片后附上，close 时，置 nil
+
 
 @property (nonatomic, copy) void(^resultImage)(JMChooseImageHelper *helper, NSDictionary *info);
 

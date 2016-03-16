@@ -33,6 +33,7 @@
 #pragma mark - show
 - (void)show {
     
+    
     if (_onlyUseCamera) {
         [JMChooseImageHelper openCamera];
         return;
@@ -50,6 +51,7 @@
         [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
         
         self.originalImage = nil;
+        self.editedImage = nil;
         self.imagePicker = nil;
     }
 }
@@ -172,8 +174,10 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
     self.imagePicker = picker;
-    self.originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];  //    UIImagePickerControllerMediaURL
-
+    self.originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];//    UIImagePickerControllerMediaURL
+    self.editedImage   = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    
     if (self.resultImage) {
         self.resultImage(self, info);
     }
