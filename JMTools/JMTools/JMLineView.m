@@ -49,8 +49,10 @@ static UIColor *defaultColor = nil;
         CGContextMoveToPoint(   context, CGRectGetMinX(rect), CGRectGetMinY(rect));
         CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
     } else {
-        CGContextMoveToPoint(   context, CGRectGetMinX(rect), CGRectGetMinY(rect));
-        CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMinY(rect));
+        
+        CGFloat y = (self.frame.origin.y <= 1) ? CGRectGetMinY(rect) : CGRectGetMaxY(rect) - 0.5;
+        CGContextMoveToPoint(   context, CGRectGetMinX(rect), y);
+        CGContextAddLineToPoint(context, CGRectGetMaxX(rect), y);
     }
 
     CGContextStrokePath(context);
