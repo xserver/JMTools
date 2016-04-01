@@ -96,6 +96,7 @@
 		D06FF2C71C318B0700AFA9C8 /* JMLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLineView.m; sourceTree = "<group>"; };
 		D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAesHelper.h; sourceTree = "<group>"; };
 		D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAesHelper.m; sourceTree = "<group>"; };
+		D8D527E21CAE534F009A21F3 /* JMUISugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMUISugar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +203,7 @@
 				385752AD1C4352DC00325909 /* JMCountdownButton.m */,
 				D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */,
 				D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */,
+				D8D527E21CAE534F009A21F3 /* JMUISugar.h */,
 				D06FF2C61C318B0700AFA9C8 /* JMLineView.h */,
 				D06FF2C71C318B0700AFA9C8 /* JMLineView.m */,
 				D06FF2AF1C317BA000AFA9C8 /* JMChooseImageHelper.h */,
