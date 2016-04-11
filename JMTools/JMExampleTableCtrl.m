@@ -9,6 +9,8 @@
 #import "JMExampleTableCtrl.h"
 #import "JMExampleBannerCtrl.h"
 #import "JMChooseImageHelper.h"
+#import "JMUISugar.h"
+
 
 @interface JMExampleTableCtrl ()
 @property (nonatomic, strong) NSArray *list;
@@ -28,6 +30,7 @@
     
     self.list = @[@"Banner",
                   @"JMChooseImageHelper",
+                  @"MCAlertCtrl",
                   ];
 }
 
@@ -56,10 +59,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([self.list[indexPath.row] isEqualToString:@"Banner"]) {
+    NSString *title = self.list[indexPath.row];
+    
+    if ([title isEqualToString:@"Banner"]) {
         [self.navigationController pushViewController:[[JMExampleBannerCtrl alloc] init] animated:YES];
     }
-    else if ([self.list[indexPath.row] isEqualToString:@"JMChooseImageHelper"]) {
+    else if ([title isEqualToString:@"JMChooseImageHelper"]) {
         
         [JMChooseImageHelper shared].resultImage = ^(JMChooseImageHelper *helper, NSDictionary *info) {
             
@@ -70,6 +75,14 @@
             [helper close];
         };
         [[JMChooseImageHelper shared] show];
+    }
+    else if ([@"MCAlertCtrl" isEqualToString:title]) {
+        
+        UIAlertController *alert = MCAlertCtrl(@"title", @"message", ^(UIAlertAction *action) {
+            
+        });
+        
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 

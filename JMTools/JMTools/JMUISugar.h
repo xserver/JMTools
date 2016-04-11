@@ -17,6 +17,27 @@ QMNavigationCtrl(UIViewController *root) {
     return [[UINavigationController alloc] initWithRootViewController:root];
 }
 
+#pragma mark - UIAlertController
+NS_INLINE UIAlertController *
+MCAlertCtrl(NSString *title, NSString *message, void(^handle)(UIAlertAction *action)) {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action;
+    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil)
+                                      style:UIAlertActionStyleDefault
+                                    handler:nil];
+    [alert addAction:action];
+    
+    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil)
+                                      style:UIAlertActionStyleDefault
+                                    handler:handle];
+    [alert addAction:action];
+    
+    return alert;
+}
+
 #pragma mark - Button
 NS_INLINE UIButton *
 QMButton(NSString *title, id target, SEL action) {
