@@ -78,7 +78,7 @@
     }
     else if ([@"MCAlertCtrl" isEqualToString:title]) {
         
-        UIAlertController *alert = MCAlertCtrl(@"title", @"message", ^(UIAlertAction *action) {
+        UIAlertController *alert = MCAlertCtrlOne(@"title", @"message", ^(UIAlertAction *action) {
             
         });
         

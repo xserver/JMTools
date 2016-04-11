@@ -18,21 +18,28 @@ QMNavigationCtrl(UIViewController *root) {
 }
 
 #pragma mark - UIAlertController
+
+//  只有确定
 NS_INLINE UIAlertController *
-MCAlertCtrl(NSString *title, NSString *message, void(^handle)(UIAlertAction *action)) {
+MCAlertCtrlOne(NSString *title, NSString *message, void(^handle)(UIAlertAction *action)) {
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
-                                                                   message:message
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil) style:UIAlertActionStyleDefault handler:handle];
+    [alert addAction:action];
+    return alert;
+}
+
+//  确定 & 取消
+NS_INLINE UIAlertController *
+MCAlertCtrlTwo(NSString *title, NSString *message, void(^handle)(UIAlertAction *action)) {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action;
-    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil)
-                                      style:UIAlertActionStyleDefault
-                                    handler:nil];
+    
+    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil) style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:action];
     
-    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil)
-                                      style:UIAlertActionStyleDefault
-                                    handler:handle];
+    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil) style:UIAlertActionStyleDefault handler:handle];
     [alert addAction:action];
     
     return alert;
