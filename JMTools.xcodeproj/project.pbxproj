@@ -33,6 +33,7 @@
 		D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */; };
 		D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2C71C318B0700AFA9C8 /* JMLineView.m */; };
 		D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */; };
+		D8CD98401CBBCD0E00FEA296 /* JMUISugar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		D06FF2C71C318B0700AFA9C8 /* JMLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLineView.m; sourceTree = "<group>"; };
 		D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAesHelper.h; sourceTree = "<group>"; };
 		D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAesHelper.m; sourceTree = "<group>"; };
+		D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMUISugar.m; sourceTree = "<group>"; };
 		D8D527E21CAE534F009A21F3 /* JMUISugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMUISugar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 				D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */,
 				D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */,
 				D8D527E21CAE534F009A21F3 /* JMUISugar.h */,
+				D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */,
 				D06FF2C61C318B0700AFA9C8 /* JMLineView.h */,
 				D06FF2C71C318B0700AFA9C8 /* JMLineView.m */,
 				D06FF2AF1C317BA000AFA9C8 /* JMChooseImageHelper.h */,
@@ -415,6 +418,7 @@
 				D06FF2C11C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m in Sources */,
 				38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */,
 				D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */,
+				D8CD98401CBBCD0E00FEA296 /* JMUISugar.m in Sources */,
 				D06FF2BF1C317BA000AFA9C8 /* JMZoomScaleView.m in Sources */,
 				386B479B1C586BD800A9F1B1 /* JMExampleBannerCtrl.m in Sources */,
 				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,

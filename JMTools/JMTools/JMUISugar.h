@@ -9,6 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@interface JMUISugar : NSObject 
+@end
+
+
+@interface UIAlertController (JMUISugar)
+
+- (void)showForController:(UIViewController *)ctrl;
+
+@end
+
+
+
+
 #ifndef JMUIQuickMake_JMUISugar_h
 #define JMUIQuickMake_JMUISugar_h
 
@@ -17,28 +30,7 @@ QMNavigationCtrl(UIViewController *root) {
     return [[UINavigationController alloc] initWithRootViewController:root];
 }
 
-#pragma mark - UIAlertController
 
-NS_INLINE UIAlertController *
-MCAlertCtrl(NSString *title, NSString *message) {
-    return [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-}
-
-////  确定 & 取消
-//NS_INLINE UIAlertController *
-//MCAlertCtrlTwo(NSString *title, NSString *message, void(^handle)(UIAlertAction *action)) {
-//    
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction *action;
-//    
-//    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil) style:UIAlertActionStyleDefault handler:nil];
-//    [alert addAction:action];
-//    
-//    action = [UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil) style:UIAlertActionStyleDefault handler:handle];
-//    [alert addAction:action];
-//    
-//    return alert;
-//}
 
 #pragma mark - Button
 NS_INLINE UIButton *
@@ -67,6 +59,33 @@ QMBarImageItem(UIImage *image, id target, SEL action) {
 NS_INLINE UIBarButtonItem *
 QMBarButtonItem(NSString *title, UIBarButtonItemStyle style, id target, SEL action) {
     return [[UIBarButtonItem alloc] initWithTitle:title style:style target:target action:action];
+}
+
+
+#pragma mark - UIAlertController
+
+//NS_INLINE UIAlertController *
+//QMAlertCtrl(NSString *title, NSString *message) {
+//    return [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+//}
+
+//  确定 or 取消
+NS_INLINE UIAlertController *
+QMAlertCtrl(NSString *title, NSString *message,
+            NSString *title1, void(^handle1)(UIAlertAction *action),
+            NSString *title2, void(^handle2)(UIAlertAction *action)) {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    if (title1) {
+        [alert addAction:[UIAlertAction actionWithTitle:title1 style:UIAlertActionStyleDefault handler:handle1]];
+    }
+    
+    if (title2) {
+        [alert addAction:[UIAlertAction actionWithTitle:title2 style:UIAlertActionStyleDefault handler:handle2]];
+    }
+    
+    return alert;
 }
 
 #pragma mark - UIAlertView

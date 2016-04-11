@@ -30,7 +30,7 @@
     
     self.list = @[@"Banner",
                   @"JMChooseImageHelper",
-                  @"MCAlertCtrl",
+                  @"QMAlertCtrl",
                   ];
 }
 
@@ -76,13 +76,21 @@
         };
         [[JMChooseImageHelper shared] show];
     }
-    else if ([@"MCAlertCtrl" isEqualToString:title]) {
+    else if ([@"QMAlertCtrl" isEqualToString:title]) {
         
-        UIAlertController *alert = MCAlertCtrlOne(@"title", @"message", ^(UIAlertAction *action) {
-            
-        });
+        [QMAlertCtrl(@"title", @"message",
+                    @"AA", ^(UIAlertAction *xx){NSLog(@"xxxx");},
+                    @"AA", nil) showForController:nil];
         
-        [self presentViewController:alert animated:YES completion:nil];
+//        [self presentViewController:QMAlertCtrl(@"title", @"message",
+//                                                @"AA", ^(UIAlertAction *xx){
+//                                                    NSLog(@"xxxx");},
+//                                                
+//                                                @"AA", nil)
+//                           animated:YES
+//                         completion:nil];
+        ;
+
     }
 }
 
