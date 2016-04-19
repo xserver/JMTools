@@ -10,6 +10,8 @@
 
 @interface JMChooseImageHelper () <UIActionSheetDelegate>
 
+@property (nonatomic, assign) UIStatusBarStyle currentStatusBarStyle;
+
 @end;
 
 @implementation JMChooseImageHelper
@@ -140,6 +142,8 @@
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         
+        [self shared].currentStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+        
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = [self shared];
         picker.allowsEditing = [self shared].allowsEditing;
@@ -155,6 +159,8 @@
 + (void)openCamera {
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        [self shared].currentStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -188,6 +194,11 @@
     if (self.resultImage) {
         self.resultImage(self, nil);
     }
+}
+
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:self.currentStatusBarStyle];
 }
 
 @end
