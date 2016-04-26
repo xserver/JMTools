@@ -33,6 +33,7 @@
 		D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */; };
 		D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2C71C318B0700AFA9C8 /* JMLineView.m */; };
 		D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */; };
+		D83C0B861CCF461C00DE3070 /* JMIndexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C0B851CCF461C00DE3070 /* JMIndexHelper.m */; };
 		D8CD98401CBBCD0E00FEA296 /* JMUISugar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,8 @@
 		D06FF2C71C318B0700AFA9C8 /* JMLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLineView.m; sourceTree = "<group>"; };
 		D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAesHelper.h; sourceTree = "<group>"; };
 		D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAesHelper.m; sourceTree = "<group>"; };
+		D83C0B841CCF461C00DE3070 /* JMIndexHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMIndexHelper.h; sourceTree = "<group>"; };
+		D83C0B851CCF461C00DE3070 /* JMIndexHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMIndexHelper.m; sourceTree = "<group>"; };
 		D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMUISugar.m; sourceTree = "<group>"; };
 		D8D527E21CAE534F009A21F3 /* JMUISugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMUISugar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +227,8 @@
 				385752A71C41F92100325909 /* JMFileTools.m */,
 				D060B8AC1C57CEC8007F9DC0 /* JMBannerView.h */,
 				D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */,
+				D83C0B841CCF461C00DE3070 /* JMIndexHelper.h */,
+				D83C0B851CCF461C00DE3070 /* JMIndexHelper.m */,
 			);
 			path = JMTools;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				D06FF28B1C317B7700AFA9C8 /* main.m in Sources */,
 				38E050AE1C3CA9AF00BD2FE4 /* JMDirectoryMan.m in Sources */,
 				D06FF2C11C317BA000AFA9C8 /* JMZoomScaleViewCtrl.m in Sources */,
+				D83C0B861CCF461C00DE3070 /* JMIndexHelper.m in Sources */,
 				38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */,
 				D06FF2BC1C317BA000AFA9C8 /* JMChooseImageHelper.m in Sources */,
 				D8CD98401CBBCD0E00FEA296 /* JMUISugar.m in Sources */,
@@ -553,6 +559,7 @@
 			baseConfigurationReference = 5A8C471E68E538402A27A60E /* Pods-JMTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = JMTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMTools;
@@ -565,6 +572,7 @@
 			baseConfigurationReference = 85F986BEF66368EE13B865A2 /* Pods-JMTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = JMTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMTools;
