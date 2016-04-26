@@ -16,10 +16,13 @@
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithCapacity:26];
     static NSString * numbers = @"1234567890 !$%^&*(){}[]<>"; // 数字等符号归类为 #
     
+    id (*getPropertySend)(id, SEL) = (void *)objc_msgSend;
     
     for (id aObject in array) {
         
-        NSString *name = objc_msgSend(aObject, property);
+        NSString *name = getPropertySend(aObject, property);
+//        NSString *name = objc_msgSend(aObject, property);
+        
         NSString *key;
         
         NSString *firstCharacter = name.length < 1 ? @"#" : [name substringToIndex:1];
@@ -56,8 +59,8 @@
         jinghao = [jinghao sortedArrayUsingComparator:^(id obj1, id obj2) {
             
             
-            NSString *name1 = objc_msgSend(obj1, property);
-            NSString *name2 = objc_msgSend(obj2, property);
+            NSString *name1 = getPropertySend(obj1, property);
+            NSString *name2 = getPropertySend(obj2, property);
             
             NSString *key1 = name1.length < 1 ? @"#" : [name1 substringToIndex:1];
             NSString *key2 = name2.length < 1 ? @"#" : [name2 substringToIndex:1];
