@@ -12,7 +12,7 @@
 static UIColor *defaultColor = nil;
 
 + (void)initialize {
-    [JMLineView setDefaultLineColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5]];
+    [JMLineView setDefaultLineColor:[UIColor colorWithRed:0.36 green:0.36 blue:0.36 alpha:0.36]];
 }
 
 + (void)setDefaultLineColor:(UIColor *)color {
@@ -39,10 +39,10 @@ static UIColor *defaultColor = nil;
 
 - (void)drawRect:(CGRect)rect {
 
-    // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
+    //    CGContextSetShouldAntialias(context, NO);
+    CGContextSetLineWidth(context, 1);
     CGContextSetStrokeColorWithColor(context, self.lineColor.CGColor);
-    CGContextSetLineWidth(context, 0.5);
     
     if (rect.size.width  < 1.2) {
         //  竖线
@@ -50,11 +50,11 @@ static UIColor *defaultColor = nil;
         CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
     } else {
         
-        CGFloat y = (self.frame.origin.y <= 1) ? CGRectGetMinY(rect) : CGRectGetMaxY(rect) - 0.5;
+        CGFloat y = (self.frame.origin.y < 0.5) ? CGRectGetMinY(rect) : CGRectGetMaxY(rect);
         CGContextMoveToPoint(   context, CGRectGetMinX(rect), y);
         CGContextAddLineToPoint(context, CGRectGetMaxX(rect), y);
     }
-
+    
     CGContextStrokePath(context);
 }
 
