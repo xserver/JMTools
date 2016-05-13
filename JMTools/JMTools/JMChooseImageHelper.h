@@ -24,11 +24,9 @@
 @property (nonatomic, copy) void(^resultImage)(JMChooseImageHelper *helper, NSDictionary *info);
 
 
-
 + (JMChooseImageHelper *)shared;
 
 - (void)show;
 - (void)close;
-
 
 @end

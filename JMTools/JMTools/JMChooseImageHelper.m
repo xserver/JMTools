@@ -83,14 +83,26 @@
         NSString *openPhoto = NSLocalizedString(@"从手机相册选择", nil);
         NSString *cancel = NSLocalizedString(@"取消", nil);
         
-        _actionSheet = [[UIActionSheet alloc] init];
-        [_actionSheet addButtonWithTitle:openCamera];
-        [_actionSheet addButtonWithTitle:openPhoto];
-        [_actionSheet addButtonWithTitle:cancel];
-        _actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
-        _actionSheet.delegate = self;
+//        _actionSheet = [[UIActionSheet alloc] init];
+//        [_actionSheet addButtonWithTitle:openCamera];
+//        [_actionSheet addButtonWithTitle:openPhoto];
+//        [_actionSheet addButtonWithTitle:cancel];
+//        _actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
+//        _actionSheet.delegate = self;
+        
+        
+        _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                   delegate:self
+                                          cancelButtonTitle:cancel
+                                     destructiveButtonTitle:nil
+                                          otherButtonTitles:openCamera, openPhoto, nil];
+        
     }
     return _actionSheet;
+}
+
+- (void)clickEmpty {
+    [self.actionSheet dismissWithClickedButtonIndex:2 animated:YES];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -148,7 +160,6 @@
         picker.delegate = [self shared];
         picker.allowsEditing = [self shared].allowsEditing;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        
 
         [[self currentWindowTopViewController] presentViewController:picker animated:YES completion:nil];
     } else {
