@@ -11,8 +11,11 @@
 
 @interface JMExampleTransitionCtrl : UIViewController
 
-@property (nonatomic, strong) JMControllerTransitionPush *pushTransition;
+@property (nonatomic, strong) id pushTransition;
 @property (nonatomic, strong) id popTransition;
+
+@property (nonatomic, strong) id presentTransition;
+
 @property (nonatomic, strong) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIImageView *contentImage;
 @end

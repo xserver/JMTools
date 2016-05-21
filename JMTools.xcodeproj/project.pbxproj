@@ -38,6 +38,7 @@
 		D8436F581CEF0747001F663D /* JMControllerTransitionPush.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436F571CEF0747001F663D /* JMControllerTransitionPush.m */; };
 		D8436F5C1CEF0C45001F663D /* JMExampleTransitionCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436F5A1CEF0C45001F663D /* JMExampleTransitionCtrl.m */; };
 		D8436F5D1CEF0C45001F663D /* JMExampleTransitionCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8436F5B1CEF0C45001F663D /* JMExampleTransitionCtrl.xib */; };
+		D8C9C7421CEFF98F00FAB2D1 /* JMCtbMoveToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C9C7411CEFF98F00FAB2D1 /* JMCtbMoveToPoint.m */; };
 		D8CD98401CBBCD0E00FEA296 /* JMUISugar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,8 @@
 		D8436F591CEF0C45001F663D /* JMExampleTransitionCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExampleTransitionCtrl.h; sourceTree = "<group>"; };
 		D8436F5A1CEF0C45001F663D /* JMExampleTransitionCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExampleTransitionCtrl.m; sourceTree = "<group>"; };
 		D8436F5B1CEF0C45001F663D /* JMExampleTransitionCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMExampleTransitionCtrl.xib; sourceTree = "<group>"; };
+		D8C9C7401CEFF98F00FAB2D1 /* JMCtbMoveToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCtbMoveToPoint.h; sourceTree = "<group>"; };
+		D8C9C7411CEFF98F00FAB2D1 /* JMCtbMoveToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCtbMoveToPoint.m; sourceTree = "<group>"; };
 		D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMUISugar.m; sourceTree = "<group>"; };
 		D8D527E21CAE534F009A21F3 /* JMUISugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMUISugar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -270,6 +273,8 @@
 				D8436F541CEF06FB001F663D /* JMControllerTransitionBase.m */,
 				D8436F561CEF0747001F663D /* JMControllerTransitionPush.h */,
 				D8436F571CEF0747001F663D /* JMControllerTransitionPush.m */,
+				D8C9C7401CEFF98F00FAB2D1 /* JMCtbMoveToPoint.h */,
+				D8C9C7411CEFF98F00FAB2D1 /* JMCtbMoveToPoint.m */,
 			);
 			name = ControllerTransition;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				386B479B1C586BD800A9F1B1 /* JMExampleBannerCtrl.m in Sources */,
 				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,
 				385752AE1C4352DC00325909 /* JMCountdownButton.m in Sources */,
+				D8C9C7421CEFF98F00FAB2D1 /* JMCtbMoveToPoint.m in Sources */,
 				D80936F91CDDC8C400866E5E /* JMMaskView.m in Sources */,
 				385752A81C41F92100325909 /* JMFileTools.m in Sources */,
 				D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */,

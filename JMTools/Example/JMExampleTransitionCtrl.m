@@ -29,6 +29,13 @@
     // Do any additional setup after loading the view from its nib.
     
     self.contentImage.image = self.image;
+    
+    
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close)]];
+}
+
+- (void)close {
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 #pragma mark - Propertys
 
@@ -72,5 +79,22 @@
 }
 
 
+
+
+#pragma mark - present
+#pragma mark - UIViewControllerTransitioningDelegate
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                   presentingController:(UIViewController *)presenting
+                                                                       sourceController:(UIViewController *)source {
+    
+    return self.presentTransition;
+    
+}
+
+
+//- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+//    
+//    return nil;
+//}
 
 @end

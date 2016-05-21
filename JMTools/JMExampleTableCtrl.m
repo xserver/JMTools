@@ -12,6 +12,7 @@
 #import "JMUISugar.h"
 #import "JMMaskView.h"
 #import "JMExampleTransitionCtrl.h"
+#import "JMCtbMoveToPoint.h"
 
 @interface JMExampleTableCtrl ()
 @property (nonatomic, strong) NSArray *list;
@@ -29,7 +30,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    self.list = @[@"PushTransition",
+    self.list = @[@"Present Transition",
+                  @"Push Transition",
                   @"Banner",
                   @"JMChooseImageHelper",
                   @"QMAlertCtrl",
@@ -74,25 +76,48 @@
     NSString *title = self.list[indexPath.row];
     if (NO) {
     }
-    else if ([title isEqualToString:@"PushTransition"]) {
+    else if ([title isEqualToString:@"Present Transition"]) {
+        
+        
+//        [cell.imageView snapshotViewAfterScreenUpdates:NO];
         
         JMExampleTransitionCtrl *ctrl = [[JMExampleTransitionCtrl alloc] init];
-        ctrl.pushTransition = [[JMControllerTransitionPush alloc] init];
         ctrl.image = [UIImage imageNamed:@"A"];
+        
+        
         UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"A"]];
         iv.contentMode = UIViewContentModeScaleAspectFit;
         iv.frame = CGRectMake(100, 100, 100, 100);
-//        [self.view addSubview:iv];
         
-        ctrl.pushTransition.zoomView = iv;
-    
+        
+        JMCtbMoveToPoint *ctb = [[JMCtbMoveToPoint alloc] init];
+        ctb.view = iv;
+        ctb.center = CGPointMake(317/2, 600/2);
+        ctrl.presentTransition = ctb;
+        
+        
+        ctrl.transitioningDelegate = ctrl;
+        [self presentViewController:ctrl animated:YES completion:nil];
+    }
+    else if ([title isEqualToString:@"Push Transition"]) {
+        
+        JMExampleTransitionCtrl *ctrl = [[JMExampleTransitionCtrl alloc] init];
+        ctrl.image = [UIImage imageNamed:@"A"];
+        
+        UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"A"]];
+        iv.contentMode = UIViewContentModeScaleAspectFit;
+        iv.frame = CGRectMake(100, 100, 100, 100);
+        
+        JMControllerTransitionPush *ctb = [[JMControllerTransitionPush alloc] init];
+        ctb.zoomView = iv;
+        ctrl.pushTransition = ctb;
+        
+        
         self.navigationController.delegate = ctrl;
 
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.navigationController pushViewController:ctrl animated:YES];
         });
-        
-
     }
     else if ([title isEqualToString:@"Banner"]) {
         [self.navigationController pushViewController:[[JMExampleBannerCtrl alloc] init] animated:YES];
