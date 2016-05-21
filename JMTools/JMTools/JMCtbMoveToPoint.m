@@ -32,7 +32,7 @@
         CGFloat h0 = self.view.frame.size.height;
         CGFloat w1, h1;
         
-        if (w0 > h0) {
+        if ([[UIScreen mainScreen] bounds].size.width/[[UIScreen mainScreen] bounds].size.height < w0/h0) {
             w1 = [[UIScreen mainScreen] bounds].size.width;
             h1 = h0/w0 * w1;
         } else {
