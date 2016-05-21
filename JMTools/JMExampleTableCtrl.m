@@ -10,7 +10,8 @@
 #import "JMExampleBannerCtrl.h"
 #import "JMChooseImageHelper.h"
 #import "JMUISugar.h"
-
+#import "JMMaskView.h"
+#import "JMExampleTransitionCtrl.h"
 
 @interface JMExampleTableCtrl ()
 @property (nonatomic, strong) NSArray *list;
@@ -28,9 +29,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    self.list = @[@"Banner",
+    self.list = @[@"PushTransition",
+                  @"Banner",
                   @"JMChooseImageHelper",
                   @"QMAlertCtrl",
+                  @"JMMaskView",
                   ];
 }
 
@@ -57,11 +60,41 @@
     return cell;
 }
 
+- (UIImageView *)screenshotWithView:(UIView *)view {
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
+    
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return [[UIImageView alloc] initWithImage:screenshot];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *title = self.list[indexPath.row];
+    if (NO) {
+    }
+    else if ([title isEqualToString:@"PushTransition"]) {
+        
+        JMExampleTransitionCtrl *ctrl = [[JMExampleTransitionCtrl alloc] init];
+        ctrl.pushTransition = [[JMControllerTransitionPush alloc] init];
+        ctrl.image = [UIImage imageNamed:@"A"];
+        UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"A"]];
+        iv.contentMode = UIViewContentModeScaleAspectFit;
+        iv.frame = CGRectMake(100, 100, 100, 100);
+//        [self.view addSubview:iv];
+        
+        ctrl.pushTransition.zoomView = iv;
     
-    if ([title isEqualToString:@"Banner"]) {
+        self.navigationController.delegate = ctrl;
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController pushViewController:ctrl animated:YES];
+        });
+        
+
+    }
+    else if ([title isEqualToString:@"Banner"]) {
         [self.navigationController pushViewController:[[JMExampleBannerCtrl alloc] init] animated:YES];
     }
     else if ([title isEqualToString:@"JMChooseImageHelper"]) {
@@ -91,6 +124,17 @@
 //                         completion:nil];
         ;
 
+    }
+    
+    else if ([@"JMMaskView" isEqualToString:title]) {
+        JMMaskView *mask = [[JMMaskView alloc] init];
+        [mask showInWindow];
+        
+        mask.appear = ^(JMMaskView *contentView){
+        
+        
+        };
+        
     }
 }
 

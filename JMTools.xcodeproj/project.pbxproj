@@ -13,7 +13,6 @@
 		386B479C1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386B479A1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib */; };
 		387A2BDF1C5872A200C1E262 /* JMExampleTableCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 387A2BDE1C5872A200C1E262 /* JMExampleTableCtrl.m */; };
 		387A2BE11C58A65900C1E262 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387A2BE01C58A65900C1E262 /* Images.xcassets */; };
-		38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */; };
 		38909B341C33F129003A2882 /* JMButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 38909B331C33F129003A2882 /* JMButtonGroup.m */; };
 		38E050AE1C3CA9AF00BD2FE4 /* JMDirectoryMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */; };
 		691BCB02BB5F2ACB5E05A3FF /* libPods-JMTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C05D4BBF02A2DA0C823BA3E5 /* libPods-JMTools.a */; };
@@ -33,7 +32,12 @@
 		D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */; };
 		D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2C71C318B0700AFA9C8 /* JMLineView.m */; };
 		D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */; };
+		D80936F91CDDC8C400866E5E /* JMMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D80936F81CDDC8C400866E5E /* JMMaskView.m */; };
 		D83C0B861CCF461C00DE3070 /* JMIndexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C0B851CCF461C00DE3070 /* JMIndexHelper.m */; };
+		D8436F551CEF06FB001F663D /* JMControllerTransitionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436F541CEF06FB001F663D /* JMControllerTransitionBase.m */; };
+		D8436F581CEF0747001F663D /* JMControllerTransitionPush.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436F571CEF0747001F663D /* JMControllerTransitionPush.m */; };
+		D8436F5C1CEF0C45001F663D /* JMExampleTransitionCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D8436F5A1CEF0C45001F663D /* JMExampleTransitionCtrl.m */; };
+		D8436F5D1CEF0C45001F663D /* JMExampleTransitionCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8436F5B1CEF0C45001F663D /* JMExampleTransitionCtrl.xib */; };
 		D8CD98401CBBCD0E00FEA296 /* JMUISugar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +62,6 @@
 		387A2BDD1C5872A200C1E262 /* JMExampleTableCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExampleTableCtrl.h; sourceTree = "<group>"; };
 		387A2BDE1C5872A200C1E262 /* JMExampleTableCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExampleTableCtrl.m; sourceTree = "<group>"; };
 		387A2BE01C58A65900C1E262 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		38909B111C3278FB003A2882 /* JMHoldGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHoldGestureRecognizer.h; sourceTree = "<group>"; };
-		38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHoldGestureRecognizer.m; sourceTree = "<group>"; };
 		38909B321C33F129003A2882 /* JMButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMButtonGroup.h; sourceTree = "<group>"; };
 		38909B331C33F129003A2882 /* JMButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMButtonGroup.m; sourceTree = "<group>"; };
 		38E050AC1C3CA9AE00BD2FE4 /* JMDirectoryMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDirectoryMan.h; sourceTree = "<group>"; };
@@ -98,8 +100,17 @@
 		D06FF2C71C318B0700AFA9C8 /* JMLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLineView.m; sourceTree = "<group>"; };
 		D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAesHelper.h; sourceTree = "<group>"; };
 		D06FF2CE1C39487800AFA9C8 /* JMAesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAesHelper.m; sourceTree = "<group>"; };
+		D80936F71CDDC8C400866E5E /* JMMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMaskView.h; sourceTree = "<group>"; };
+		D80936F81CDDC8C400866E5E /* JMMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMaskView.m; sourceTree = "<group>"; };
 		D83C0B841CCF461C00DE3070 /* JMIndexHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMIndexHelper.h; sourceTree = "<group>"; };
 		D83C0B851CCF461C00DE3070 /* JMIndexHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMIndexHelper.m; sourceTree = "<group>"; };
+		D8436F531CEF06FB001F663D /* JMControllerTransitionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMControllerTransitionBase.h; sourceTree = "<group>"; };
+		D8436F541CEF06FB001F663D /* JMControllerTransitionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMControllerTransitionBase.m; sourceTree = "<group>"; };
+		D8436F561CEF0747001F663D /* JMControllerTransitionPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMControllerTransitionPush.h; sourceTree = "<group>"; };
+		D8436F571CEF0747001F663D /* JMControllerTransitionPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMControllerTransitionPush.m; sourceTree = "<group>"; };
+		D8436F591CEF0C45001F663D /* JMExampleTransitionCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExampleTransitionCtrl.h; sourceTree = "<group>"; };
+		D8436F5A1CEF0C45001F663D /* JMExampleTransitionCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExampleTransitionCtrl.m; sourceTree = "<group>"; };
+		D8436F5B1CEF0C45001F663D /* JMExampleTransitionCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMExampleTransitionCtrl.xib; sourceTree = "<group>"; };
 		D8CD983F1CBBCD0E00FEA296 /* JMUISugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMUISugar.m; sourceTree = "<group>"; };
 		D8D527E21CAE534F009A21F3 /* JMUISugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMUISugar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +149,9 @@
 				386B47981C586BD800A9F1B1 /* JMExampleBannerCtrl.h */,
 				386B47991C586BD800A9F1B1 /* JMExampleBannerCtrl.m */,
 				386B479A1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib */,
+				D8436F591CEF0C45001F663D /* JMExampleTransitionCtrl.h */,
+				D8436F5A1CEF0C45001F663D /* JMExampleTransitionCtrl.m */,
+				D8436F5B1CEF0C45001F663D /* JMExampleTransitionCtrl.xib */,
 			);
 			name = Example;
 			path = JMTools/Example;
@@ -204,6 +218,7 @@
 		D06FF2AE1C317BA000AFA9C8 /* JMTools */ = {
 			isa = PBXGroup;
 			children = (
+				D8436F4F1CEF054A001F663D /* ControllerTransition */,
 				385752AC1C4352DC00325909 /* JMCountdownButton.h */,
 				385752AD1C4352DC00325909 /* JMCountdownButton.m */,
 				D06FF2CD1C39487800AFA9C8 /* JMAesHelper.h */,
@@ -219,8 +234,6 @@
 				D06FF2B11C317BA000AFA9C8 /* JMTimeHelper.h */,
 				D06FF2B21C317BA000AFA9C8 /* JMTimeHelper.m */,
 				D06FF2B31C317BA000AFA9C8 /* JMZoomScaleImages */,
-				38909B111C3278FB003A2882 /* JMHoldGestureRecognizer.h */,
-				38909B121C3278FB003A2882 /* JMHoldGestureRecognizer.m */,
 				38E050AC1C3CA9AE00BD2FE4 /* JMDirectoryMan.h */,
 				38E050AD1C3CA9AE00BD2FE4 /* JMDirectoryMan.m */,
 				385752A61C41F92100325909 /* JMFileTools.h */,
@@ -229,6 +242,8 @@
 				D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */,
 				D83C0B841CCF461C00DE3070 /* JMIndexHelper.h */,
 				D83C0B851CCF461C00DE3070 /* JMIndexHelper.m */,
+				D80936F71CDDC8C400866E5E /* JMMaskView.h */,
+				D80936F81CDDC8C400866E5E /* JMMaskView.m */,
 			);
 			path = JMTools;
 			sourceTree = "<group>";
@@ -246,6 +261,17 @@
 				D06FF2BB1C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib */,
 			);
 			path = JMZoomScaleImages;
+			sourceTree = "<group>";
+		};
+		D8436F4F1CEF054A001F663D /* ControllerTransition */ = {
+			isa = PBXGroup;
+			children = (
+				D8436F531CEF06FB001F663D /* JMControllerTransitionBase.h */,
+				D8436F541CEF06FB001F663D /* JMControllerTransitionBase.m */,
+				D8436F561CEF0747001F663D /* JMControllerTransitionPush.h */,
+				D8436F571CEF0747001F663D /* JMControllerTransitionPush.m */,
+			);
+			name = ControllerTransition;
 			sourceTree = "<group>";
 		};
 		DDE6491E9E1F8143B2F88AFA /* Frameworks */ = {
@@ -347,6 +373,7 @@
 				D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */,
 				386B479C1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib in Resources */,
 				D06FF2C01C317BA000AFA9C8 /* JMZoomScaleView.xib in Resources */,
+				D8436F5D1CEF0C45001F663D /* JMExampleTransitionCtrl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +443,6 @@
 				387A2BDF1C5872A200C1E262 /* JMExampleTableCtrl.m in Sources */,
 				D060B8AE1C57CEC8007F9DC0 /* JMBannerView.m in Sources */,
 				D06FF2BE1C317BA000AFA9C8 /* JMZoomScaleCell.m in Sources */,
-				38909B131C3278FB003A2882 /* JMHoldGestureRecognizer.m in Sources */,
 				D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */,
 				D06FF28B1C317B7700AFA9C8 /* main.m in Sources */,
 				38E050AE1C3CA9AF00BD2FE4 /* JMDirectoryMan.m in Sources */,
@@ -429,8 +455,12 @@
 				386B479B1C586BD800A9F1B1 /* JMExampleBannerCtrl.m in Sources */,
 				D06FF2BD1C317BA000AFA9C8 /* JMTimeHelper.m in Sources */,
 				385752AE1C4352DC00325909 /* JMCountdownButton.m in Sources */,
+				D80936F91CDDC8C400866E5E /* JMMaskView.m in Sources */,
 				385752A81C41F92100325909 /* JMFileTools.m in Sources */,
 				D06FF2C81C318B0700AFA9C8 /* JMLineView.m in Sources */,
+				D8436F581CEF0747001F663D /* JMControllerTransitionPush.m in Sources */,
+				D8436F551CEF06FB001F663D /* JMControllerTransitionBase.m in Sources */,
+				D8436F5C1CEF0C45001F663D /* JMExampleTransitionCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
