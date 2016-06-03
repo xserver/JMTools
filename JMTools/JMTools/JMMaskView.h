@@ -2,7 +2,7 @@
 //  JMMaskView.h
 //  JMTools
 //
-//  Created by Dragon on 16/5/7.
+//  Created by xserver on 16/5/7.
 //  Copyright © 2016年 pitaya. All rights reserved.
 //
 

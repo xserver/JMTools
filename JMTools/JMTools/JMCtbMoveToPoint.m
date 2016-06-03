@@ -2,7 +2,7 @@
 //  JMCtbMoveToPoint.m
 //  JMTools
 //
-//  Created by Dragon on 16/5/21.
+//  Created by xserver on 16/5/21.
 //  Copyright © 2016年 pitaya. All rights reserved.
 //
 
@@ -12,13 +12,14 @@
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     
-    UIView *fromView = [[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey] view];
+//    UIView *fromView = [[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey] view];
+    
     UIView *toView = [[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey] view];
     UIView *containerView = [transitionContext containerView];  //  转场中间视图
     
     UIView *bg = [[UIView alloc] init];
     bg.backgroundColor = [UIColor blackColor];
-    bg.frame = fromView.bounds;
+    bg.frame = [[UIScreen mainScreen] bounds];
     [containerView addSubview:bg];
     
     toView.frame = [[UIScreen mainScreen] bounds];

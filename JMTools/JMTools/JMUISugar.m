@@ -1,9 +1,9 @@
 //
 //  JMUISugar.m
-//  aaa
+//  JMUIQuickMake
 //
-//  Created by Dragon on 16/4/11.
-//  Copyright © 2016年 Dragon. All rights reserved.
+//  Created by xserver on 16/4/11.
+//  Copyright © 2016年 pitaya. All rights reserved.
 //
 
 #import "JMUISugar.h"

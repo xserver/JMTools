@@ -2,7 +2,7 @@
 //  JMCtbMoveToPoint.h
 //  JMTools
 //
-//  Created by Dragon on 16/5/21.
+//  Created by xserver on 16/5/21.
 //  Copyright © 2016年 pitaya. All rights reserved.
 //
 

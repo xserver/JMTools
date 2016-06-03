@@ -3,7 +3,7 @@
 //  JMUIQuickMake
 //
 //  Created by xserver on 15/4/4.
-//  Copyright (c) 2015年 pitaya. All rights reserved.
+//  Copyright © 2016年 pitaya. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
