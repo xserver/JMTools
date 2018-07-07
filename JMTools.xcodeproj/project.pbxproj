@@ -42,6 +42,10 @@
 		6CC2CFF820F093E4005A357B /* NSString+isaCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2CFDA20F093E4005A357B /* NSString+isaCategory.m */; };
 		6CC2CFF920F093E4005A357B /* NSString+isaJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2CFDC20F093E4005A357B /* NSString+isaJson.m */; };
 		6CC2CFFA20F093E4005A357B /* NSData+isaGnuZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2CFDF20F093E4005A357B /* NSData+isaGnuZip.m */; };
+		6CC2D00120F106A3005A357B /* JMHUD_Info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2CFFC20F106A3005A357B /* JMHUD_Info@2x.png */; };
+		6CC2D00220F106A3005A357B /* JMHUD_Success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2CFFD20F106A3005A357B /* JMHUD_Success@2x.png */; };
+		6CC2D00320F106A3005A357B /* JMHUD_Error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2CFFF20F106A3005A357B /* JMHUD_Error@2x.png */; };
+		6CC2D00420F106A3005A357B /* UIView+JMProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2D00020F106A3005A357B /* UIView+JMProgress.m */; };
 		D060B8AE1C57CEC8007F9DC0 /* JMBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D060B8AD1C57CEC8007F9DC0 /* JMBannerView.m */; };
 		D06FF28B1C317B7700AFA9C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28A1C317B7700AFA9C8 /* main.m */; };
 		D06FF28E1C317B7700AFA9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */; };
@@ -149,6 +153,11 @@
 		6CC2CFDD20F093E4005A357B /* NSString+JMPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JMPath.h"; sourceTree = "<group>"; };
 		6CC2CFDF20F093E4005A357B /* NSData+isaGnuZip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+isaGnuZip.m"; sourceTree = "<group>"; };
 		6CC2CFE020F093E4005A357B /* NSData+isaGnuZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+isaGnuZip.h"; sourceTree = "<group>"; };
+		6CC2CFFC20F106A3005A357B /* JMHUD_Info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JMHUD_Info@2x.png"; sourceTree = "<group>"; };
+		6CC2CFFD20F106A3005A357B /* JMHUD_Success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JMHUD_Success@2x.png"; sourceTree = "<group>"; };
+		6CC2CFFE20F106A3005A357B /* UIView+JMProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMProgress.h"; sourceTree = "<group>"; };
+		6CC2CFFF20F106A3005A357B /* JMHUD_Error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JMHUD_Error@2x.png"; sourceTree = "<group>"; };
+		6CC2D00020F106A3005A357B /* UIView+JMProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMProgress.m"; sourceTree = "<group>"; };
 		8B769C51D344A8C6D952C0A8 /* Pods-JMToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMToolsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JMToolsTests/Pods-JMToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0B1DC2BFFB6DDD72B7F82DA /* Pods-JMToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMToolsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JMToolsTests/Pods-JMToolsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D060B8AC1C57CEC8007F9DC0 /* JMBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMBannerView.h; sourceTree = "<group>"; };
@@ -257,20 +266,20 @@
 		6CC2CF9E20F093E4005A357B /* JMCategory */ = {
 			isa = PBXGroup;
 			children = (
-				6CC2CF9F20F093E4005A357B /* back */,
-				6CC2CFA220F093E4005A357B /* UIView */,
 				6CC2CFAF20F093E4005A357B /* Alert */,
-				6CC2CFB620F093E4005A357B /* Web */,
+				6CC2CF9F20F093E4005A357B /* back */,
 				6CC2CFB920F093E4005A357B /* Color */,
-				6CC2CFBE20F093E4005A357B /* Timer */,
-				6CC2CFC120F093E4005A357B /* Image */,
-				6CC2CFC420F093E4005A357B /* Controller */,
 				6CC2CFC720F093E4005A357B /* Container */,
-				6CC2CFCA20F093E4005A357B /* UIControl */,
-				6CC2CFCF20F093E4005A357B /* Object */,
-				6CC2CFD220F093E4005A357B /* GestureRecognizer */,
-				6CC2CFD520F093E4005A357B /* String */,
+				6CC2CFC420F093E4005A357B /* Controller */,
 				6CC2CFDE20F093E4005A357B /* Data */,
+				6CC2CFD220F093E4005A357B /* GestureRecognizer */,
+				6CC2CFC120F093E4005A357B /* Image */,
+				6CC2CFCF20F093E4005A357B /* Object */,
+				6CC2CFD520F093E4005A357B /* String */,
+				6CC2CFBE20F093E4005A357B /* Timer */,
+				6CC2CFCA20F093E4005A357B /* UIControl */,
+				6CC2CFA220F093E4005A357B /* UIView */,
+				6CC2CFB620F093E4005A357B /* Web */,
 			);
 			path = JMCategory;
 			sourceTree = "<group>";
@@ -376,9 +385,9 @@
 			isa = PBXGroup;
 			children = (
 				6CC2CFCB20F093E4005A357B /* UITextField+JMMoney.h */,
+				6CC2CFCE20F093E4005A357B /* UITextField+JMMoney.m */,
 				6CC2CFCC20F093E4005A357B /* UIButton+isaCategory.m */,
 				6CC2CFCD20F093E4005A357B /* UIButton+isaCategory.h */,
-				6CC2CFCE20F093E4005A357B /* UITextField+JMMoney.m */,
 			);
 			path = UIControl;
 			sourceTree = "<group>";
@@ -423,6 +432,18 @@
 				6CC2CFE020F093E4005A357B /* NSData+isaGnuZip.h */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		6CC2CFFB20F106A3005A357B /* JMHUB */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2CFFF20F106A3005A357B /* JMHUD_Error@2x.png */,
+				6CC2CFFC20F106A3005A357B /* JMHUD_Info@2x.png */,
+				6CC2CFFD20F106A3005A357B /* JMHUD_Success@2x.png */,
+				6CC2CFFE20F106A3005A357B /* UIView+JMProgress.h */,
+				6CC2D00020F106A3005A357B /* UIView+JMProgress.m */,
+			);
+			path = JMHUB;
 			sourceTree = "<group>";
 		};
 		D06FF27D1C317B7700AFA9C8 = {
@@ -487,6 +508,7 @@
 		D06FF2AE1C317BA000AFA9C8 /* JMTools */ = {
 			isa = PBXGroup;
 			children = (
+				6CC2CFFB20F106A3005A357B /* JMHUB */,
 				D8436F4F1CEF054A001F663D /* ControllerTransition */,
 				385752AC1C4352DC00325909 /* JMCountdownButton.h */,
 				385752AD1C4352DC00325909 /* JMCountdownButton.m */,
@@ -629,10 +651,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D06FF2991C317B7700AFA9C8 /* LaunchScreen.storyboard in Resources */,
+				6CC2D00220F106A3005A357B /* JMHUD_Success@2x.png in Resources */,
 				D06FF2961C317B7700AFA9C8 /* Assets.xcassets in Resources */,
 				387A2BE11C58A65900C1E262 /* Images.xcassets in Resources */,
 				D06FF2941C317B7700AFA9C8 /* Main.storyboard in Resources */,
 				D06FF2C21C317BA000AFA9C8 /* JMZoomScaleViewCtrl.xib in Resources */,
+				6CC2D00120F106A3005A357B /* JMHUD_Info@2x.png in Resources */,
+				6CC2D00320F106A3005A357B /* JMHUD_Error@2x.png in Resources */,
 				386B479C1C586BD800A9F1B1 /* JMExampleBannerCtrl.xib in Resources */,
 				D06FF2C01C317BA000AFA9C8 /* JMZoomScaleView.xib in Resources */,
 				D8436F5D1CEF0C45001F663D /* JMExampleTransitionCtrl.xib in Resources */,
@@ -692,6 +717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC2D00420F106A3005A357B /* UIView+JMProgress.m in Sources */,
 				6CC2CFF820F093E4005A357B /* NSString+isaCategory.m in Sources */,
 				D06FF2CF1C39487800AFA9C8 /* JMAesHelper.m in Sources */,
 				387A2BDF1C5872A200C1E262 /* JMExampleTableCtrl.m in Sources */,
@@ -871,6 +897,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = JMTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -884,6 +911,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = JMTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitaya.JMTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";

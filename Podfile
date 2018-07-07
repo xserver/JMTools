@@ -4,7 +4,8 @@
 # use_frameworks!
 
 target 'JMTools' do
-pod 'Masonry', '~> 0.6.4'
+pod 'Masonry'
+pod 'MBProgressHUD'
 end
 
 target 'JMToolsTests' do
