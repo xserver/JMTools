@@ -8,6 +8,7 @@
 
 #import "JMExampleTableCtrl.h"
 #import "JMExampleBannerCtrl.h"
+#import "JMExampleTextViewCtrl.h"
 #import "JMChooseImageHelper.h"
 #import "JMUISugar.h"
 #import "JMMaskView.h"
@@ -38,7 +39,8 @@
                   @"QMAlertCtrl",
                   @"JMMaskView",
                   @"TableView",
-                  @"NavigationBar"
+                  @"NavigationBar",
+                  @"TextView",
                   ];
 }
 
@@ -148,7 +150,6 @@
         ;
 
     }
-    
     else if ([@"JMMaskView" isEqualToString:title]) {
         JMMaskView *mask = [[JMMaskView alloc] init];
         [mask showInWindow];
@@ -157,7 +158,11 @@
         
         
         };
-        
+    }
+    #pragma mark - TextView
+    else if ([title isEqualToString:@"TextView"]) {
+        JMExampleTextViewCtrl *ctrl = [[JMExampleTextViewCtrl alloc] init];
+        [self presentViewController:ctrl animated:YES completion:nil];
     }
 }
 
