@@ -41,6 +41,7 @@
                   @"TableView",
                   @"NavigationBar",
                   @"TextView",
+                  @"Animation"
                   ];
 }
 
@@ -80,6 +81,7 @@
     NSString *title = self.list[indexPath.row];
     if (NO) {
     }
+    #pragma mark - Transition
     else if ([title isEqualToString:@"Present Transition"]) {
 //        [cell.imageView snapshotViewAfterScreenUpdates:NO];
         
@@ -122,6 +124,7 @@
     else if ([title isEqualToString:@"Banner"]) {
         [self.navigationController pushViewController:[[JMExampleBannerCtrl alloc] init] animated:YES];
     }
+    #pragma mark - JMChooseImageHelper
     else if ([title isEqualToString:@"JMChooseImageHelper"]) {
         
         [JMChooseImageHelper shared].resultImage = ^(JMChooseImageHelper *helper, NSDictionary *info) {
@@ -153,16 +156,17 @@
     else if ([@"JMMaskView" isEqualToString:title]) {
         JMMaskView *mask = [[JMMaskView alloc] init];
         [mask showInWindow];
-        
         mask.appear = ^(JMMaskView *contentView){
-        
-        
         };
     }
     #pragma mark - TextView
     else if ([title isEqualToString:@"TextView"]) {
         JMExampleTextViewCtrl *ctrl = [[JMExampleTextViewCtrl alloc] init];
         [self presentViewController:ctrl animated:YES completion:nil];
+    }
+    #pragma mark - Animation
+    else if ([title isEqualToString:@"Animation"]) {
+        [self presentViewController:[NSClassFromString(@"JMAnimationCtrl") new] animated:YES completion:nil];
     }
 }
 

@@ -83,6 +83,7 @@
 		6C487C75218C984000CA2FB9 /* XLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C487C4D218C984000CA2FB9 /* XLine.m */; };
 		6C487C79218C99DF00CA2FB9 /* JMExampleTextViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C487C77218C99DF00CA2FB9 /* JMExampleTextViewCtrl.m */; };
 		6C487C7A218C99DF00CA2FB9 /* JMExampleTextViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C487C78218C99DF00CA2FB9 /* JMExampleTextViewCtrl.xib */; };
+		6C487C7E218CA37D00CA2FB9 /* JMAnimationCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C487C7D218CA37D00CA2FB9 /* JMAnimationCtrl.m */; };
 		6CC2CFE120F093E4005A357B /* UIScrollView+JMFitContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2CFA120F093E4005A357B /* UIScrollView+JMFitContent.m */; };
 		6CC2CFE220F093E4005A357B /* UIView+isaNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2CFA420F093E4005A357B /* UIView+isaNib.m */; };
 		6CC2CFE320F093E4005A357B /* UILabel+JMAttributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2CFA620F093E4005A357B /* UILabel+JMAttributed.m */; };
@@ -261,6 +262,8 @@
 		6C487C76218C99DF00CA2FB9 /* JMExampleTextViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMExampleTextViewCtrl.h; sourceTree = "<group>"; };
 		6C487C77218C99DF00CA2FB9 /* JMExampleTextViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMExampleTextViewCtrl.m; sourceTree = "<group>"; };
 		6C487C78218C99DF00CA2FB9 /* JMExampleTextViewCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JMExampleTextViewCtrl.xib; sourceTree = "<group>"; };
+		6C487C7C218CA37D00CA2FB9 /* JMAnimationCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAnimationCtrl.h; sourceTree = "<group>"; };
+		6C487C7D218CA37D00CA2FB9 /* JMAnimationCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAnimationCtrl.m; sourceTree = "<group>"; };
 		6CC2CFA020F093E4005A357B /* UIScrollView+JMFitContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+JMFitContent.h"; sourceTree = "<group>"; };
 		6CC2CFA120F093E4005A357B /* UIScrollView+JMFitContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JMFitContent.m"; sourceTree = "<group>"; };
 		6CC2CFA320F093E4005A357B /* UITableViewCell+isaCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+isaCategory.h"; sourceTree = "<group>"; };
@@ -557,6 +560,15 @@
 			path = basic;
 			sourceTree = "<group>";
 		};
+		6C487C7B218CA37D00CA2FB9 /* JMAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				6C487C7C218CA37D00CA2FB9 /* JMAnimationCtrl.h */,
+				6C487C7D218CA37D00CA2FB9 /* JMAnimationCtrl.m */,
+			);
+			path = JMAnimation;
+			sourceTree = "<group>";
+		};
 		6CC2CF9E20F093E4005A357B /* JMCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +745,7 @@
 			children = (
 				51854039CAEDD833BB3FC91E /* Frameworks */,
 				387A2BE01C58A65900C1E262 /* Images.xcassets */,
+				6C487C7B218CA37D00CA2FB9 /* JMAnimation */,
 				6C487C05218C984000CA2FB9 /* JMXUI */,
 				6C487BB4218C97A400CA2FB9 /* Example */,
 				6C487BBB218C97A400CA2FB9 /* JMTools */,
@@ -956,6 +969,7 @@
 			files = (
 				6C487C5D218C984000CA2FB9 /* XImageWindow.m in Sources */,
 				6C487C75218C984000CA2FB9 /* XLine.m in Sources */,
+				6C487C7E218CA37D00CA2FB9 /* JMAnimationCtrl.m in Sources */,
 				6C487BEA218C97A400CA2FB9 /* JMExampleBannerCtrl.m in Sources */,
 				6C487BF7218C97A400CA2FB9 /* JMIndexHelper.m in Sources */,
 				6C487C67218C984000CA2FB9 /* XRound.m in Sources */,
