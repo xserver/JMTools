@@ -21,4 +21,9 @@
     return view;
 }
 
++ (id)isaCellForTableView:(UITableView *)table forIndexPath:indexPath {
+    
+    return [table dequeueReusableCellWithIdentifier:NSStringFromClass(self.class) forIndexPath:indexPath];
+}
+
 @end

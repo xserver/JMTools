@@ -12,4 +12,7 @@
 
 @property (nonatomic, weak, readonly) UITableView *isaTableView;
 
+
++ (id)isaCellForTableView:(UITableView *)table forIndexPath:indexPath;
+
 @end

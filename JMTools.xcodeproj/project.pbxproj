@@ -517,18 +517,18 @@
 		6CC2CFA220F093E4005A357B /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				6CC2CFA320F093E4005A357B /* UITableViewCell+isaCategory.h */,
-				6CC2CFA420F093E4005A357B /* UIView+isaNib.m */,
-				6CC2CFA520F093E4005A357B /* UIView+isaCategory.h */,
+				6CC2CFAC20F093E4005A357B /* UILabel+JMAttributed.h */,
 				6CC2CFA620F093E4005A357B /* UILabel+JMAttributed.m */,
+				6CC2CFA320F093E4005A357B /* UITableViewCell+isaCategory.h */,
+				6CC2CFAA20F093E4005A357B /* UITableViewCell+isaCategory.m */,
+				6CC2CFA520F093E4005A357B /* UIView+isaCategory.h */,
+				6CC2CFAB20F093E4005A357B /* UIView+isaCategory.m */,
+				6CC2CFA920F093E4005A357B /* UIView+isaNib.h */,
+				6CC2CFA420F093E4005A357B /* UIView+isaNib.m */,
+				6CC2CFAE20F093E4005A357B /* UIView+isaScreenshot.h */,
 				6CC2CFA720F093E4005A357B /* UIView+isaScreenshot.m */,
 				6CC2CFA820F093E4005A357B /* UIView+isaShake.h */,
-				6CC2CFA920F093E4005A357B /* UIView+isaNib.h */,
-				6CC2CFAA20F093E4005A357B /* UITableViewCell+isaCategory.m */,
-				6CC2CFAB20F093E4005A357B /* UIView+isaCategory.m */,
-				6CC2CFAC20F093E4005A357B /* UILabel+JMAttributed.h */,
 				6CC2CFAD20F093E4005A357B /* UIView+isaShake.m */,
-				6CC2CFAE20F093E4005A357B /* UIView+isaScreenshot.h */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -670,18 +670,19 @@
 		D06FF27D1C317B7700AFA9C8 = {
 			isa = PBXGroup;
 			children = (
-				D06FF2C41C31833200AFA9C8 /* README.md */,
-				D06FF2C31C31830C00AFA9C8 /* JMTools.podspec */,
+				386B47971C586B8D00A9F1B1 /* Example */,
+				51854039CAEDD833BB3FC91E /* Frameworks */,
 				387A2BE01C58A65900C1E262 /* Images.xcassets */,
+				D06FF2AE1C317BA000AFA9C8 /* JMTools */,
+				6CC2CF9E20F093E4005A357B /* JMCategory */,
+				D06FF2881C317B7700AFA9C8 /* JMTools */,
+				D06FF2C31C31830C00AFA9C8 /* JMTools.podspec */,
+				D06FF2A21C317B7700AFA9C8 /* JMToolsTests */,
+				5629710EF63262C60419622C /* Pods */,
+				D06FF2871C317B7700AFA9C8 /* Products */,
+				D06FF2C41C31833200AFA9C8 /* README.md */,
 				6C487B84218C932800CA2FB9 /* WKWebView */,
 				6C487B3B218C932800CA2FB9 /* XUI */,
-				6CC2CF9E20F093E4005A357B /* JMCategory */,
-				386B47971C586B8D00A9F1B1 /* Example */,
-				D06FF2881C317B7700AFA9C8 /* JMTools */,
-				D06FF2A21C317B7700AFA9C8 /* JMToolsTests */,
-				D06FF2871C317B7700AFA9C8 /* Products */,
-				5629710EF63262C60419622C /* Pods */,
-				51854039CAEDD833BB3FC91E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -699,7 +700,6 @@
 			children = (
 				D06FF28C1C317B7700AFA9C8 /* AppDelegate.h */,
 				D06FF28D1C317B7700AFA9C8 /* AppDelegate.m */,
-				D06FF2AE1C317BA000AFA9C8 /* JMTools */,
 				D06FF2921C317B7700AFA9C8 /* Main.storyboard */,
 				D06FF2951C317B7700AFA9C8 /* Assets.xcassets */,
 				D06FF2971C317B7700AFA9C8 /* LaunchScreen.storyboard */,
@@ -759,7 +759,8 @@
 				D80936F71CDDC8C400866E5E /* JMMaskView.h */,
 				D80936F81CDDC8C400866E5E /* JMMaskView.m */,
 			);
-			path = JMTools;
+			name = JMTools;
+			path = JMTools/JMTools;
 			sourceTree = "<group>";
 		};
 		D06FF2B31C317BA000AFA9C8 /* JMZoomScaleImages */ = {

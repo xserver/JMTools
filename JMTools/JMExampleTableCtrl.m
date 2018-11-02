@@ -13,6 +13,7 @@
 #import "JMMaskView.h"
 #import "JMExampleTransitionCtrl.h"
 #import "JMCtbMoveToPoint.h"
+#import "UITableViewCell+isaCategory.h"
 
 @interface JMExampleTableCtrl ()
 @property (nonatomic, strong) NSArray *list;
@@ -36,6 +37,8 @@
                   @"JMChooseImageHelper",
                   @"QMAlertCtrl",
                   @"JMMaskView",
+                  @"TableView",
+                  @"NavigationBar"
                   ];
 }
 
@@ -55,10 +58,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JMExampleRootCell" forIndexPath:indexPath];
-    
     cell.textLabel.text = self.list[indexPath.row];
-    
     return cell;
 }
 
@@ -77,18 +79,14 @@
     if (NO) {
     }
     else if ([title isEqualToString:@"Present Transition"]) {
-        
-        
 //        [cell.imageView snapshotViewAfterScreenUpdates:NO];
         
         JMExampleTransitionCtrl *ctrl = [[JMExampleTransitionCtrl alloc] init];
         ctrl.image = [UIImage imageNamed:@"A"];
         
-        
         UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"A"]];
         iv.contentMode = UIViewContentModeScaleAspectFit;
         iv.frame = CGRectMake(100, 100, 100, 100);
-        
         
         JMCtbMoveToPoint *ctb = [[JMCtbMoveToPoint alloc] init];
         ctb.view = iv;
