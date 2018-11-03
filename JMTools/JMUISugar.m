@@ -8,11 +8,6 @@
 
 #import "JMUISugar.h"
 
-@implementation JMUISugar
-
-@end
-
-
 @implementation UIAlertController (JMUISugar)
 
 - (void)showForController:(UIViewController *)ctrl {

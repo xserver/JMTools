@@ -25,13 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
     self.list = @[@"Present Transition",
                   @"Push Transition",
                   @"Banner",
@@ -45,13 +38,7 @@
                   ];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -65,15 +52,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JMExampleRootCell" forIndexPath:indexPath];
     cell.textLabel.text = self.list[indexPath.row];
     return cell;
-}
-
-- (UIImageView *)screenshotWithView:(UIView *)view {
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
-    
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return [[UIImageView alloc] initWithImage:screenshot];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,7 +74,6 @@
         ctb.view = iv;
         ctb.center = CGPointMake(317/2, 600/2);
         ctrl.presentTransition = ctb;
-        
         
         ctrl.transitioningDelegate = ctrl;
         [self presentViewController:ctrl animated:YES completion:nil];
@@ -121,6 +98,7 @@
             [self.navigationController pushViewController:ctrl animated:YES];
         });
     }
+    #pragma mark - Banner
     else if ([title isEqualToString:@"Banner"]) {
         [self.navigationController pushViewController:[[JMExampleBannerCtrl alloc] init] animated:YES];
     }
@@ -128,30 +106,19 @@
     else if ([title isEqualToString:@"JMChooseImageHelper"]) {
         
         [JMChooseImageHelper shared].resultImage = ^(JMChooseImageHelper *helper, NSDictionary *info) {
-            
             NSLog(@"%@", helper.originalImage);
-            
             NSLog(@"%@", helper.imagePicker);
-            
             [helper close];
         };
         [[JMChooseImageHelper shared] show];
     }
     else if ([@"QMAlertCtrl" isEqualToString:title]) {
         
-        [QMAlertCtrl(@"title", @"message",
-                    @"AA", ^(UIAlertAction *xx){NSLog(@"xxxx");},
-                    @"AA", nil) showForController:nil];
-        
-//        [self presentViewController:QMAlertCtrl(@"title", @"message",
-//                                                @"AA", ^(UIAlertAction *xx){
-//                                                    NSLog(@"xxxx");},
-//                                                
-//                                                @"AA", nil)
-//                           animated:YES
-//                         completion:nil];
-        ;
-
+        [QMAlertCtrl(@"title",
+                     @"message",
+                     @"AA",
+                     ^(UIAlertAction *xx){NSLog(@"xxxx");},
+                     @"BB", nil) showForController:nil];
     }
     else if ([@"JMMaskView" isEqualToString:title]) {
         JMMaskView *mask = [[JMMaskView alloc] init];
@@ -171,4 +138,12 @@
 }
 
 
+- (UIImageView *)screenshotWithView:(UIView *)view {
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
+    
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return [[UIImageView alloc] initWithImage:screenshot];
+}
 @end
